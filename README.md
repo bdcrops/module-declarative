@@ -105,5 +105,7 @@ php bin/magento setup:di:compile
 ```
 
 ## Ref
+
 https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/
+
 https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/
