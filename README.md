@@ -47,20 +47,17 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
 ## 1.3  Insert data
 
+create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.php
+
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
 
-## 1.4  FAQ of Declarative Schema
-
-
-## 1.5 How to install & upgrade BDC_Declarative
-
+## 1.4 How to install & upgrade BDC_Declarative
 
 ### A. Copy and paste
-
 If you don't want to install via composer, you can use this way.
 
 - Download [the latest version here](https://github.com/bdcrops/module-declarative/archive/master.zip)
@@ -103,6 +100,8 @@ Run compile if your store in Product mode:
 php bin/magento setup:di:compile
 
 ```
+
+## 1.5  FAQ of Declarative Schema
 
 ## Ref
 
