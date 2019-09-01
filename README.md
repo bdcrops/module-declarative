@@ -10,9 +10,9 @@ Declarative Schema: Magento 2.3x introduced a new declarative schema feature whi
 
 1.3- Insert data (Installing and upgrading data)
 
-1.4- FAQ of Declarative Schema
+1.4 - How to install & upgrade BDC_Declarative
 
-1.5 - How to install & upgrade BDC_Declarative
+1.5- FAQ of Declarative Schema
 
 
 ## 1.1 create table
@@ -52,7 +52,7 @@ create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 
-Run php bin/magento setup:upgrade then 
+Run php bin/magento setup:upgrade then
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
