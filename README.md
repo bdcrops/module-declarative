@@ -2,6 +2,17 @@
 
 Declarative Schema: Magento 2.3x introduced a new declarative schema feature which aims at eliminating the excessive work and speeding up the installation and upgrade processes.
 
+Most module developers will be familiar with creating php scripts for creating, updating and manipulating custom tables for their modules. These files would live in the module directory here;
+
+/app/code/NameSpace/ModuleName/Setup/InstallSchema.php
+/app/code/NameSpace/ModuleName/Setup/UpgradeSchema.php
+
+Since Magento 2.3.0, you can now use the declarative DB schema XML to create and update your DB tables in a single XML file. This file is placed in your module here;
+
+/app/code/NameSpace/ModuleName/etc/db_schema.xml
+
+This change is incredibly useful once you start playing with it. The php schema scripts can be long winded and difficult to read. The XML is short and neat, making it a relative dream to work with.
+
 #### Goal:
 
 1.1- create table (db_schema.xml)
