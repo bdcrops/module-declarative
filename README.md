@@ -15,9 +15,9 @@ This change is incredibly useful once you start playing with it. The php schema 
 
 #### Goal:
 
-1.1- create table (db_schema.xml)
+1.1- create table (etc/db_schema.xml)
 
-1.2-schema whitelist
+1.2- schema whitelist (etc/db_schema_whitelist.json)
 
 1.3- Insert data (Installing and upgrading data)
 
