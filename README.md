@@ -52,6 +52,8 @@ create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 
+Run php bin/magento setup:upgrade then 
+
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
 
