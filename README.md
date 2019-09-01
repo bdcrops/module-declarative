@@ -19,7 +19,7 @@ Declarative Schema: Magento 2.3x introduced a new declarative schema feature whi
 
 Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
 
-![Back End](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
 
 
 
@@ -32,19 +32,28 @@ Before running the upgrade command you need to add your schema to db_whitelist_s
 
 For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
 
+
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+
+
 php bin/magento setup:db-declaration:generate-whitelist [options]
 php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
 
 php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
 
+
 Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
 
 
-## 1.3  
+## 1.3  Insert data
 
-## 1.4
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data-table.png)
 
-## How to install & upgrade BDC_Declarative
+
+## 1.4  FAQ of Declarative Schema
+
+
+## 1.5 How to install & upgrade BDC_Declarative
 
 
 ### A. Copy and paste
