@@ -4,14 +4,23 @@ Declarative Schema: Magento 2.3x introduced a new declarative schema feature whi
 
 #### Goal:
 
-1.1-create table (Installing and upgrading the database schema)
+1.1- create table (db_schema.xml)
+
 1.2-schema whitelist
+
 1.3- Insert data (Installing and upgrading data)
+
 1.4- FAQ of Declarative Schema
+
 1.5 - How to install & upgrade BDC_Declarative
 
 
 ## 1.1 create table
+
+Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
+
+![Back End](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+
 
 
 ## 1.2 A schema whitelist
