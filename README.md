@@ -47,8 +47,10 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
 ## 1.3  Insert data
 
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
 
 ## 1.4  FAQ of Declarative Schema
@@ -70,11 +72,8 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
 
-
-
-
-[![Latest Stable Version](https://poser.pugx.org/bdcrops/module-Declarative/v/stable)](https://packagist.org/packages/bdcrops/module-Declarative)
-[![Total Downloads](https://poser.pugx.org/bdcrops/module-Declarative/downloads)](https://packagist.org/packages/bdcrops/module-Declarative)
+[![Latest Stable Version](https://poser.pugx.org/bdcrops/module-declarative/v/stable)](https://packagist.org/packages/bdcrops/module-declarative)
+[![Total Downloads](https://poser.pugx.org/bdcrops/module-declarative/downloads)](https://packagist.org/packages/bdcrops/module-declarative)
 
 
 
@@ -91,16 +90,14 @@ https://github.com/bdcrops/module-declarative.git
 
 composer require bdcrops/module-declarative:~1.0.0
 ```
-## Upgrade    
+Upgrade    
 
 ```
 composer update bdcrops/module-declarative
 
-
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
-
 Run compile if your store in Product mode:
 ```
 php bin/magento setup:di:compile
