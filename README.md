@@ -47,7 +47,8 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
 ## 1.3  Insert data
 
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data-table.png)
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 
 
 ## 1.4  FAQ of Declarative Schema
