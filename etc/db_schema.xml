@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+* @category BDCrops
+* @package BDC\Declarative Schema
+* @author Abdul Matin <matinict@gmail.com / info@bdcrops.com >
+* @copyright Copyright (c) 2018 BDCrops, Ltd (http://www.bdcrops.com)
+* @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
  */
 -->
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
@@ -13,10 +16,6 @@
         <column xsi:type="varchar" name="note" nullable="false" length="255" comment="Descrition"/>
         <column xsi:type="timestamp" name="created"  comment="Time of event"/>
         <column xsi:type="timestamp" name="date_closed"  comment="Time of event"/>
-        <constraint xsi:type="primary" referenceId="PRIMARY">
-            <column name="id"/>
-        </constraint>
+        <constraint xsi:type="primary" referenceId="PRIMARY">   <column name="id"/> </constraint>
     </table>
-
-
 </schema>
