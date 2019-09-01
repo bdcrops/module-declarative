@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category BDCrops Inc.
+* @package BDC\Declarative
+* @author Abdul Matin <matinict@gmail.com / info@bdcrops.com >
+* @copyright Copyright (c) 2018 BDCrops, Ltd (http://www.bdcrops.com)
+* @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="BDC_Declarative" setup_version="1.0.0"/>
+
+</config>

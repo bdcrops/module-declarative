@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="bdc_declarative" resource="default" engine="innodb" comment="bdcrops declarative table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="25" comment="Name"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="25" comment="Email"/>
+        <column xsi:type="varchar" name="note" nullable="false" length="255" comment="Descrition"/>
+        <column xsi:type="timestamp" name="created"  comment="Time of event"/>
+        <column xsi:type="timestamp" name="date_closed"  comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+
+
+</schema>
