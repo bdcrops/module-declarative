@@ -161,14 +161,11 @@ The following example adds the date_closed column.
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="declarative_table">
-        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
-        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
-        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
-        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+        <column .../> ...
+
 +       <column xsi:type="timestamp" name="date_closed" padding="10" comment="Time of event"/>
-        <constraint xsi:type="primary" referenceId="PRIMARY">
-            <column name="id_column"/>
-        </constraint>
+
+        <constraint ..>...</constraint>
     </table>
 </schema>
 ```
@@ -202,14 +199,12 @@ The following example changes the type of the title column from varchar to tinyt
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="declarative_table">
-        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
-        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column .../>
+        <column .../>
 -       <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
 +       <column xsi:type="tinytext" name="title" nullable="false" length="255" comment="Title"/>
         <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
-        <constraint xsi:type="primary" referenceId="PRIMARY">
-            <column name="id_column"/>
-        </constraint>
+        <constraint ...>....</constraint>
     </table>
 </schema>
 ```
@@ -232,6 +227,7 @@ The following example adds the INDEX_SEVERITY index to the declarative_table tab
     <table name="declarative_table">
         <column .... />
         <constraint ...> <column name="id_column"/> </constraint>
+
 +       <index referenceId="INDEX_SEVERITY" indexType="btree">
 +           <column name="severity"/>
 +       </index>
@@ -253,6 +249,7 @@ In the following example, the selected constraint node defines the characteristi
 +     <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
 +       column="severity" referenceTable="severities" referenceColumn="severity_identifier"
 +       onDelete="CASCADE"/>
+
     </table>
 </schema>
 ```
@@ -269,6 +266,7 @@ The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting 
 -  <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
 -  column="severity" referenceTable="severities" referenceColumn="severity_identifier"
 -   onDelete="CASCADE"/>
+
     </table>
 </schema>
 ```
