@@ -116,7 +116,27 @@ php bin/magento setup:di:compile
 
 ## 1.5  FAQ of Declarative Schema
 
-##Drop a table
+
+##How to Create a table?
+
+The below example creates the declarative_table table with four columns. The id_column column is the primary key.
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
++    <table name="declarative_table">
++        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
++        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
++        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
++        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
++        <constraint xsi:type="primary" referenceId="PRIMARY">
++            <column name="id_column"/>
++        </constraint>
++    </table>
+</schema>
+```
+When creating a new table, remember to generate the db_schema_whitelist.json file.
+
+##How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
@@ -125,12 +145,164 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 </schema>
 ```
 
-##Rename a table
+## How to Rename a table?
 
   ```
   <table name="declarative_table">
    Changed as below
 <table name="new_declarative_table" onCreate="migrateDataFromAnotherTable(declarative_table)">
+```
+
+##How to Add a column to table?
+
+
+The following example adds the date_closed column.
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
++       <column xsi:type="timestamp" name="date_closed" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
+When adding a new column into table, remember to generate the db_schema_whitelist.json file.
+
+##How to Drop a column from a table?
+
+The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+-       <column xsi:type="timestamp" name="date_closed" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
+It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
+
+##How to Change the column type?
+
+The following example changes the type of the title column from varchar to tinytext.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+-       <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
++       <column xsi:type="tinytext" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
+
+##How to Rename a column?
+
+To rename a column, delete the original column declaration and create a new one. In the new column declaration, use the onCreate attribute to specify which column to migrate data from. Use the following construction to migrate data from the same table.
+```
+onCreate="migrateDataFrom(entity_id)"
+```
+When renaming a column, remember to regenerate the db_schema_whitelist.json file so it contains the new name in addition to the old one.
+
+##How to Add an index?
+
+The following example adds the INDEX_SEVERITY index to the declarative_table table.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column .... />
+        <constraint ...> <column name="id_column"/> </constraint>
++       <index referenceId="INDEX_SEVERITY" indexType="btree">
++           <column name="severity"/>
++       </index>
+    </table>
+</schema>
+```
+
+## How to Create a foreign key?
+
+In the following example, the selected constraint node defines the characteristics of the FL_ALLOWED_SEVERITIES foreign key.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column ../> ...
+        <constraint...> ...    </constraint>
+
++     <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
++       column="severity" referenceTable="severities" referenceColumn="severity_identifier"
++       onDelete="CASCADE"/>
+    </table>
+</schema>
+```
+
+## How to Drop a foreign key?
+
+The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting its constraint node. To drop a constraint declared in another module, redeclare it with the disabled attribute set to true.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+      ......
+-  <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
+-  column="severity" referenceTable="severities" referenceColumn="severity_identifier"
+-   onDelete="CASCADE"/>
+    </table>
+</schema>
+```
+
+## How to Recreate a foreign key?
+
+In this example, Module A defines a new table with primary key id_column. Module B declares its own schema, in which it creates a new column (new_id_column) and changes the primary index to this column. Module B disables the original primary key and sets a new primary key with a referenceId value that is different from PRIMARY. Although this value is different, the real name of the primary key in the database remains PRIMARY.
+
+Module A declaration
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
+Module B declaration
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="new_id_column" padding="10" unsigned="true" nullable="false"
+                comment="New Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY" disabled="true"/>
+        <constraint xsi:type="primary" referenceId="NEW_PRIMARY">
+            <column name="new_id_column"/>
+        </constraint>
+    </table>
+</schema>
 ```
 
 
