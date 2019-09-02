@@ -117,7 +117,7 @@ php bin/magento setup:di:compile
 ## 1.5  FAQ of Declarative Schema
 
 
-##How to Create a table?
+## How to Create a table?
 
 The below example creates the declarative_table table with four columns. The id_column column is the primary key.
 ```
@@ -136,7 +136,7 @@ The below example creates the declarative_table table with four columns. The id_
 ```
 When creating a new table, remember to generate the db_schema_whitelist.json file.
 
-##How to Drop a table?
+## How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
@@ -153,7 +153,7 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 <table name="new_declarative_table" onCreate="migrateDataFromAnotherTable(declarative_table)">
 ```
 
-##How to Add a column to table?
+## How to Add a column to table?
 
 
 The following example adds the date_closed column.
@@ -174,7 +174,7 @@ The following example adds the date_closed column.
 ```
 When adding a new column into table, remember to generate the db_schema_whitelist.json file.
 
-##How to Drop a column from a table?
+## How to Drop a column from a table?
 
 The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
 ```
@@ -194,7 +194,7 @@ The following example removes the date_closed column by deleting its column node
 ```
 It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
 
-##How to Change the column type?
+## How to Change the column type?
 
 The following example changes the type of the title column from varchar to tinytext.
 
@@ -214,7 +214,7 @@ The following example changes the type of the title column from varchar to tinyt
 </schema>
 ```
 
-##How to Rename a column?
+## How to Rename a column?
 
 To rename a column, delete the original column declaration and create a new one. In the new column declaration, use the onCreate attribute to specify which column to migrate data from. Use the following construction to migrate data from the same table.
 ```
@@ -222,7 +222,7 @@ onCreate="migrateDataFrom(entity_id)"
 ```
 When renaming a column, remember to regenerate the db_schema_whitelist.json file so it contains the new name in addition to the old one.
 
-##How to Add an index?
+## How to Add an index?
 
 The following example adds the INDEX_SEVERITY index to the declarative_table table.
 
