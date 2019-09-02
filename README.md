@@ -116,6 +116,21 @@ php bin/magento setup:di:compile
 
 ## 1.5  FAQ of Declarative Schema
 
+#Drop a table
+
+To drop declarative_table table was completely removed from the db-schema.xml file.
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        //Remove All Content, Table will be Drop after whitelist & Upgrade run
+</schema>
+
+#Rename a table
+
+  <table name="declarative_table">
+   Changed as below
+<table name="new_declarative_table" onCreate="migrateDataFromAnotherTable(declarative_table)">
+
+
+
 ## Ref
 
 https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/
