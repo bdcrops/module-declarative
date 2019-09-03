@@ -13,7 +13,8 @@ Since Magento 2.3.0, you can now use the declarative DB schema XML to create and
 
 This change is incredibly useful once you start playing with it. The php schema scripts can be long winded and difficult to read. The XML is short and neat, making it a relative dream to work with.
 
-#### Goal:
+
+## Goal:
 
 1.1- create table (etc/db_schema.xml)
 
@@ -26,6 +27,8 @@ This change is incredibly useful once you start playing with it. The php schema 
 1.5- FAQ of Declarative Schema
 
 1.6- Magento 2 Certified Associate Developer Exam
+
+
 
 ## 1.1 create table
 
