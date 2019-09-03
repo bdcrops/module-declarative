@@ -25,6 +25,8 @@ This change is incredibly useful once you start playing with it. The php schema 
 
 1.5- FAQ of Declarative Schema
 
+1.6- Magento 2 Certified Associate Developer Exam
+
 ## 1.1 create table
 
 Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
@@ -326,7 +328,9 @@ Module B declaration
 
 -Adding partitions and options to a table
 
-### Magento 2 Certified Associate Developer Exam (4.4 Demonstrate an ability to use declarative schema)
+
+### 1.6- Magento 2 Certified Associate Developer Exam
+(4.4 Demonstrate an ability to use declarative schema)
 
 ## How do you add a column using declarative schema?
 
