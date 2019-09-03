@@ -303,6 +303,27 @@ Module B declaration
 </schema>
 ```
 
+## What is Data patch?
+
+ - A class that contains data modification instructions. It can have dependencies on other data or schema patches.
+
+## What is Revertable data patch?
+
+- A patch that can be reverted as a module or path is uninstalled or deleted. Revertable operations are Data Query Language (DQL) and Data Manipulation Language (DML) operations: INSERT, UPDATE.
+
+## What is Migration?
+
+- A type of non-revertable data patch that can be applied, but not reverted. Any complex operation, such as one that contains an application layer (for example, Collections or Serializers) is non-revertable. SQL delete operations are non-revertable because they can cause triggering.
+
+## What is Schema patch &  allow  operations?
+
+ A class that contains custom schema modification instructions. Schema patches are used along with declarative schema, but these patches allow complex operations such as:
+
+-Adding triggers, stored procedures, functions
+-Performing data migration with inside DDL operations
+-Renaming tables, columns, and other entities
+-Adding partitions and options to a table
+
 
 ## Ref
 
