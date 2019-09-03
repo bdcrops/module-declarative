@@ -118,7 +118,7 @@ php bin/magento setup:di:compile
 ## 1.5  FAQ of Declarative Schema
 
 
-## 1. How to Create a table?
+### 1.5.1. How to Create a table?
 
 The below example creates the declarative_table table with four columns. The id_column column is the primary key.
 ```
@@ -137,7 +137,7 @@ The below example creates the declarative_table table with four columns. The id_
 ```
 When creating a new table, remember to generate the db_schema_whitelist.json file.
 
-## 2. How to Drop a table?
+### 1.5.2 How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
@@ -146,7 +146,7 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 </schema>
 ```
 
-## 3. How to Rename a table?
+### 1.5.3 How to Rename a table?
 
   ```
   <table name="declarative_table">
@@ -316,7 +316,7 @@ Module B declaration
 
 - A type of non-revertable data patch that can be applied, but not reverted. Any complex operation, such as one that contains an application layer (for example, Collections or Serializers) is non-revertable. SQL delete operations are non-revertable because they can cause triggering.
 
-## 15. What is Schema patch &  allow  operations?
+### 1.5.15 What is Schema patch &  allow  operations?
 
  A class that contains custom schema modification instructions. Schema patches are used along with declarative schema, but these patches allow complex operations such as:
 
@@ -329,7 +329,7 @@ Module B declaration
 -Adding partitions and options to a table
 
 
-### 1.6- Magento 2 Certified Associate Developer Exam
+## 1.6- Magento 2 Certified Associate Developer Exam
 
 
 (4.4 Demonstrate an ability to use declarative schema)
