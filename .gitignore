@@ -1,0 +1,2 @@
+# Don't track content of these folders
+/etc/db_schema_whitelist.json
