@@ -330,6 +330,8 @@ Module B declaration
 
 
 ### 1.6- Magento 2 Certified Associate Developer Exam
+
+
 (4.4 Demonstrate an ability to use declarative schema)
 
 ## How do you add a column using declarative schema?
