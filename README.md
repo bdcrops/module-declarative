@@ -320,8 +320,11 @@ Module B declaration
  A class that contains custom schema modification instructions. Schema patches are used along with declarative schema, but these patches allow complex operations such as:
 
 -Adding triggers, stored procedures, functions
+
 -Performing data migration with inside DDL operations
+
 -Renaming tables, columns, and other entities
+
 -Adding partitions and options to a table
 
 
