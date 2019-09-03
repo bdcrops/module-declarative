@@ -1,4 +1,4 @@
-## BDC_Declarative Schema Module
+## BDC_Declarative Schema Module Declarative Schema Tutorial
 
 Declarative Schema: Magento 2.3x introduced a new declarative schema feature which aims at eliminating the excessive work and speeding up the installation and upgrade processes.
 
