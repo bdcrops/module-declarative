@@ -16,65 +16,23 @@ This change is incredibly useful once you start playing with it. The php schema 
 
 ## Goal:
 
-1.1- create table (etc/db_schema.xml)
+ - Create table (etc/db_schema.xml)
 
-1.2- schema whitelist (etc/db_schema_whitelist.json)
+ - Schema whitelist (etc/db_schema_whitelist.json)
 
-1.3- Insert data (Installing and upgrading data)
+ - Insert data (Installing and upgrading data)
 
-1.4 - How to install & upgrade BDC_Declarative
+ - How to install & upgrade BDC_Declarative
 
-1.5- FAQ of Declarative Schema
+ - FAQ of Declarative Schema
 
-1.6- Magento 2 Certified Associate Developer Exam
-
-
-
-## 1.1 create table
-
-Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
-
-![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+ - Magento 2 Certified Associate Developer Exam
 
 
 
-## 1.2 A schema whitelist
+## 1. How to install & upgrade  Declarative Schema Module
 
-You will not be able to run a declarative mode without creating a schema whitelist.
-Note: it is recommended to generate a new whitelist for every release for the double-check purposes.
-
-Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
-
-For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
-
-
-![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
-
-
-php bin/magento setup:db-declaration:generate-whitelist [options]
-php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
-
-php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
-
-
-Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
-
-
-## 1.3  Insert data
-
-create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.php
-
-
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
-
-Run php bin/magento setup:upgrade then
-
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
-
-
-## 1.4 How to install & upgrade BDC_Declarative
-
-### A. Copy and paste
+### 1.1. Copy and paste
 If you don't want to install via composer, you can use this way.
 
 - Download [the latest version here](https://github.com/bdcrops/module-declarative/archive/master.zip)
@@ -91,11 +49,11 @@ php bin/magento setup:static-content:deploy
 
 
 
-### B. Install via composer
+### 1.2. Install via composer
 
 We recommend you to install BDC_Declarative module via composer. It is easy to install, update and maintaince.Run the following command in Magento 2 root folder.
 
-####  Install & Upgrade
+### 1.3  Install & Upgrade
 
 Run
 ```
@@ -117,11 +75,64 @@ Run compile if your store in Product mode:
 php bin/magento setup:di:compile
 
 ```
+****
 
-## 1.5  FAQ of Declarative Schema
+## 2 Declarative Schema Module Step By Step
+
+ - Create app/code/BDC/Declarative/registration.php
+ - Create app/code/BDC/Declarative/etc/module.xml
+ - Create app/code/BDC/Declarative/etc/db_schema.xml
+ - Create app/code/BDC/Declarative/Setup/Schema/Sample.php
+ - Create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php
+ - Create app/code/BDC/Declarative/Setup/Patch/Data/Revertable.php
 
 
-### 1.5.1. How to Create a table?
+## 3 Declarative Schema FAQ
+
+- 3.1 create table
+
+Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
+
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+
+
+
+-  3.2 A schema whitelist
+
+You will not be able to run a declarative mode without creating a schema whitelist.
+Note: it is recommended to generate a new whitelist for every release for the double-check purposes.
+
+Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
+
+For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
+
+
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+
+```
+php bin/magento setup:db-declaration:generate-whitelist [options]
+php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
+php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+```
+
+Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
+
+
+- 3.3  Insert data
+
+create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.php
+
+
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+
+Run php bin/magento setup:upgrade then
+
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+
+
+
+
+- 3.4. How to Create a table?
 
 The below example creates the declarative_table table with four columns. The id_column column is the primary key.
 ```
@@ -140,7 +151,7 @@ The below example creates the declarative_table table with four columns. The id_
 ```
 When creating a new table, remember to generate the db_schema_whitelist.json file.
 
-### 1.5.2 How to Drop a table?
+- 3.5 How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
@@ -149,7 +160,7 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 </schema>
 ```
 
-### 1.5.3 How to Rename a table?
+- 3.6 How to Rename a table?
 
   ```
   <table name="declarative_table">
@@ -157,7 +168,7 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 <table name="new_declarative_table" onCreate="migrateDataFromAnotherTable(declarative_table)">
 ```
 
-## 4. How to Add a column to table?
+- 3.7 How to Add a column to table?
 
 
 The following example adds the date_closed column.
@@ -175,7 +186,7 @@ The following example adds the date_closed column.
 ```
 When adding a new column into table, remember to generate the db_schema_whitelist.json file.
 
-## 5. How to Drop a column from a table?
+- 3.8 How to Drop a column from a table?
 
 The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
 ```
@@ -195,7 +206,7 @@ The following example removes the date_closed column by deleting its column node
 ```
 It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
 
-## 6. How to Change the column type?
+- 3.9 How to Change the column type?
 
 The following example changes the type of the title column from varchar to tinytext.
 
@@ -213,7 +224,7 @@ The following example changes the type of the title column from varchar to tinyt
 </schema>
 ```
 
-## 7. How to Rename a column?
+- 3.10 How to Rename a column?
 
 To rename a column, delete the original column declaration and create a new one. In the new column declaration, use the onCreate attribute to specify which column to migrate data from. Use the following construction to migrate data from the same table.
 ```
@@ -221,7 +232,7 @@ onCreate="migrateDataFrom(entity_id)"
 ```
 When renaming a column, remember to regenerate the db_schema_whitelist.json file so it contains the new name in addition to the old one.
 
-## 8. How to Add an index?
+- 3.11 How to Add an index?
 
 The following example adds the INDEX_SEVERITY index to the declarative_table table.
 
@@ -239,7 +250,7 @@ The following example adds the INDEX_SEVERITY index to the declarative_table tab
 </schema>
 ```
 
-## 9. How to Create a foreign key?
+- 3.12 How to Create a foreign key?
 
 In the following example, the selected constraint node defines the characteristics of the FL_ALLOWED_SEVERITIES foreign key.
 
@@ -258,7 +269,7 @@ In the following example, the selected constraint node defines the characteristi
 </schema>
 ```
 
-## 10. How to Drop a foreign key?
+- 3.13 How to Drop a foreign key?
 
 The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting its constraint node. To drop a constraint declared in another module, redeclare it with the disabled attribute set to true.
 
@@ -275,7 +286,7 @@ The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting 
 </schema>
 ```
 
-## 11. How to Recreate a foreign key?
+- 3.14 How to Recreate a foreign key?
 
 In this example, Module A defines a new table with primary key id_column. Module B declares its own schema, in which it creates a new column (new_id_column) and changes the primary index to this column. Module B disables the original primary key and sets a new primary key with a referenceId value that is different from PRIMARY. Although this value is different, the real name of the primary key in the database remains PRIMARY.
 
@@ -306,20 +317,19 @@ Module B declaration
     </table>
 </schema>
 ```
+- 3.15 What is Data patch?
 
-## 12.What is Data patch?
+   A class that contains data modification instructions. It can have dependencies on other data or schema patches.
 
- - A class that contains data modification instructions. It can have dependencies on other data or schema patches.
+- 3.16 What is Revertable data patch?
 
-## 13. What is Revertable data patch?
+ A patch that can be reverted as a module or path is uninstalled or deleted. Revertable operations are Data Query Language (DQL) and Data Manipulation Language (DML) operations: INSERT, UPDATE.
 
-- A patch that can be reverted as a module or path is uninstalled or deleted. Revertable operations are Data Query Language (DQL) and Data Manipulation Language (DML) operations: INSERT, UPDATE.
+- 3.17 What is Migration?
 
-## 14. What is Migration?
+A type of non-revertable data patch that can be applied, but not reverted. Any complex operation, such as one that contains an application layer (for example, Collections or Serializers) is non-revertable. SQL delete operations are non-revertable because they can cause triggering.
 
-- A type of non-revertable data patch that can be applied, but not reverted. Any complex operation, such as one that contains an application layer (for example, Collections or Serializers) is non-revertable. SQL delete operations are non-revertable because they can cause triggering.
-
-### 1.5.15 What is Schema patch &  allow  operations?
+- 3.18 What is Schema patch &  allow  operations?
 
  A class that contains custom schema modification instructions. Schema patches are used along with declarative schema, but these patches allow complex operations such as:
 
@@ -332,7 +342,7 @@ Module B declaration
 -Adding partitions and options to a table
 
 
-## 1.6- Magento 2 Certified Associate Developer Exam
+- 3.19  Magento 2 Certified Associate Developer Exam
 
 
 (4.4 Demonstrate an ability to use declarative schema)
@@ -354,11 +364,11 @@ The following example adds the date_closed column.
 ```
 When adding a new column into table, remember to generate the db_schema_whitelist.json file.
 
-##How do you modify a table added by another module?
+- 3.20 How do you modify a table added by another module?
 
 See Above FAQ
 
-##How do you delete a column?
+- 3.21 How do you delete a column?
 
 The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
 ```
@@ -378,21 +388,39 @@ The following example removes the date_closed column by deleting its column node
 ```
 It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
 
-## How do you add an index or foreign key using declarative schema?
+
+- 3.22 "Declarative Schema" vs "Extension Attributes" ?
+
+"Declarative Schema" is used when you need to create a NEW table inside Magento. With declarative schema you have the advantages of mutations.
+"Extension Attributes" are used to add new fields inside an EXISTING table. In this way you don't extend the original model.So in the above example, the best approach is to use Extension Attributes. magento-2-what-are-extension-attributes
+
+- 3.23 How do you add an index or foreign key using declarative schema?
 
 See Above FAQ
 
-## How do you manipulate data using data patches?
+- 3.24  How do you manipulate data using data patches?
 
 See Above FAQ
 
-## What is the purpose of schema patches?
+- 3.25 What is the purpose of schema patches?
 
  See Above FAQ
+
+- 3.26 How to manipulate columns and keys using declarative schema?  
+
+- 3.27 What is the purpose of whitelisting?
+
+
+- 3.28  How to use Data and Schema patches?
+
+
+ - 3.29 How to manage dependencies between patch files?
+
 
 
 ## Ref
 
-https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/
+- [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/)
 
-https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/
+- [onilabblog](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/)
+- [slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema)
