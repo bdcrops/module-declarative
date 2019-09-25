@@ -251,7 +251,44 @@ php bin/magento setup:di:compile
 
 ## 3.  Declarative Schema FAQ
 
-- 3.1 create table
+### What is Declarative Schema ?
+
+ Declarative Schema
+ - Newer way of handling Setup Script Operations
+ - Setup Scripts are still supported in 2.3.x versions (EOL unknown)
+ - Might be Backported to 2.2.x newer versions
+ - Declarative Schema and Setup Scripts don’t work together
+ - If developing backwards compatible modules use Setup Script
+
+![declarative-schema](docs/magento-2-declarative-schema-8-638.jpg)
+
+### Why Declarative Schema ?
+Issues with Setup Scripts
+- Setup Scripts get complicated to manage overtime
+- Module sequencing needs to be handled properly
+- Confusing to manage Install vs Upgrade scripts
+- Version number mishap happens
+- No Rollbacks
+
+![Issues with Setup Scripts](docs/magento-2-declarative-schema-10-638.jpg)
+
+### Will Declarative Schema help ?
+ Declarative Schema Offers
+ • Avoidance of missed/repeated SQL operations
+ • Installation testing using dry-run mode
+ • Performance optimization
+ • Support for rollbacks *
+ ![Declarative Schema Offers](docs/magento-2-declarative-schema-12-638.jpg)
+
+###
+
+###
+
+###
+
+###
+
+### create table
 
 Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
 
