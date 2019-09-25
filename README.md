@@ -538,10 +538,7 @@ Revertable Patches
 ![](docs/magento-23-schema-and-data-patches-41-638.jpg)
 
 
-
-
-
-### 3.5 How to Drop a table?
+### How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
@@ -550,16 +547,14 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
 </schema>
 ```
 
-- 3.6 How to Rename a table?
+### How to Rename a table?
 
   ```
   <table name="declarative_table">
    Changed as below
 <table name="new_declarative_table" onCreate="migrateDataFromAnotherTable(declarative_table)">
 ```
-
-- 3.7 How to Add a column to table?
-
+### How to Add a column to table?
 
 The following example adds the date_closed column.
 ```
@@ -576,7 +571,7 @@ The following example adds the date_closed column.
 ```
 When adding a new column into table, remember to generate the db_schema_whitelist.json file.
 
-- 3.8 How to Drop a column from a table?
+### How to Drop a column from a table?
 
 The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
 ```
@@ -596,7 +591,7 @@ The following example removes the date_closed column by deleting its column node
 ```
 It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
 
-- 3.9 How to Change the column type?
+### How to Change the column type?
 
 The following example changes the type of the title column from varchar to tinytext.
 
@@ -614,7 +609,7 @@ The following example changes the type of the title column from varchar to tinyt
 </schema>
 ```
 
-- 3.10 How to Rename a column?
+###  How to Rename a column?
 
 To rename a column, delete the original column declaration and create a new one. In the new column declaration, use the onCreate attribute to specify which column to migrate data from. Use the following construction to migrate data from the same table.
 ```
@@ -622,7 +617,7 @@ onCreate="migrateDataFrom(entity_id)"
 ```
 When renaming a column, remember to regenerate the db_schema_whitelist.json file so it contains the new name in addition to the old one.
 
-- 3.11 How to Add an index?
+###  How to Add an index?
 
 The following example adds the INDEX_SEVERITY index to the declarative_table table.
 
@@ -640,7 +635,7 @@ The following example adds the INDEX_SEVERITY index to the declarative_table tab
 </schema>
 ```
 
-- 3.12 How to Create a foreign key?
+### How to Create a foreign key?
 
 In the following example, the selected constraint node defines the characteristics of the FL_ALLOWED_SEVERITIES foreign key.
 
@@ -659,7 +654,7 @@ In the following example, the selected constraint node defines the characteristi
 </schema>
 ```
 
-- 3.13 How to Drop a foreign key?
+### How to Drop a foreign key?
 
 The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting its constraint node. To drop a constraint declared in another module, redeclare it with the disabled attribute set to true.
 
@@ -676,7 +671,7 @@ The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting 
 </schema>
 ```
 
-- 3.14 How to Recreate a foreign key?
+### How to Recreate a foreign key?
 
 In this example, Module A defines a new table with primary key id_column. Module B declares its own schema, in which it creates a new column (new_id_column) and changes the primary index to this column. Module B disables the original primary key and sets a new primary key with a referenceId value that is different from PRIMARY. Although this value is different, the real name of the primary key in the database remains PRIMARY.
 
@@ -707,32 +702,32 @@ Module B declaration
     </table>
 </schema>
 ```
-- 3.15 What is Data patch?
+###  What is Data patch?
 
-   A class that contains data modification instructions. It can have dependencies on other data or schema patches.
+A class that contains data modification instructions. It can have dependencies on other data or schema patches.
 
-- 3.16 What is Revertable data patch?
+### What is Revertable data patch?
 
  A patch that can be reverted as a module or path is uninstalled or deleted. Revertable operations are Data Query Language (DQL) and Data Manipulation Language (DML) operations: INSERT, UPDATE.
 
-- 3.17 What is Migration?
+### What is Migration?
 
 A type of non-revertable data patch that can be applied, but not reverted. Any complex operation, such as one that contains an application layer (for example, Collections or Serializers) is non-revertable. SQL delete operations are non-revertable because they can cause triggering.
 
-- 3.18 What is Schema patch &  allow  operations?
+### What is Schema patch &  allow  operations?
 
  A class that contains custom schema modification instructions. Schema patches are used along with declarative schema, but these patches allow complex operations such as:
 
--Adding triggers, stored procedures, functions
+- Adding triggers, stored procedures, functions
 
--Performing data migration with inside DDL operations
+- Performing data migration with inside DDL operations
 
--Renaming tables, columns, and other entities
+- Renaming tables, columns, and other entities
 
--Adding partitions and options to a table
+- Adding partitions and options to a table
 
 
-- 3.19  Magento 2 Certified Associate Developer Exam
+# Magento 2 Certified Associate Developer Exam
 
 
 (4.4 Demonstrate an ability to use declarative schema)
@@ -754,11 +749,11 @@ The following example adds the date_closed column.
 ```
 When adding a new column into table, remember to generate the db_schema_whitelist.json file.
 
-- 3.20 How do you modify a table added by another module?
+### How do you modify a table added by another module?
 
 See Above FAQ
 
-- 3.21 How do you delete a column?
+### How do you delete a column?
 
 The following example removes the date_closed column by deleting its column node. To drop a column declared in another module, redeclare it with the disabled attribute set to true.
 ```
@@ -779,32 +774,32 @@ The following example removes the date_closed column by deleting its column node
 It is possible to drop a column only if it exists in the db_schema_whitelist.json file.
 
 
-- 3.22 "Declarative Schema" vs "Extension Attributes" ?
+### "Declarative Schema" vs "Extension Attributes" ?
 
 "Declarative Schema" is used when you need to create a NEW table inside Magento. With declarative schema you have the advantages of mutations.
 "Extension Attributes" are used to add new fields inside an EXISTING table. In this way you don't extend the original model.So in the above example, the best approach is to use Extension Attributes. magento-2-what-are-extension-attributes
 
-- 3.23 How do you add an index or foreign key using declarative schema?
+### How do you add an index or foreign key using declarative schema?
 
 See Above FAQ
 
-- 3.24  How do you manipulate data using data patches?
+### How do you manipulate data using data patches?
 
 See Above FAQ
 
-- 3.25 What is the purpose of schema patches?
+### What is the purpose of schema patches?
 
  See Above FAQ
 
-- 3.26 How to manipulate columns and keys using declarative schema?  
+### How to manipulate columns and keys using declarative schema?  
 
-- 3.27 What is the purpose of whitelisting?
-
-
-- 3.28  How to use Data and Schema patches?
+### What is the purpose of whitelisting?
 
 
- - 3.29 How to manage dependencies between patch files?
+###  How to use Data and Schema patches?
+
+
+### How to manage dependencies between patch files?
 
 
 
