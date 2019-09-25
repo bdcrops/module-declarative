@@ -81,17 +81,175 @@ php bin/magento setup:di:compile
 ```
 ****
 
-## 2 Declarative Schema Module Step By Step
+## 2. Declarative Schema Module Step By Step
 
  - Create app/code/BDC/Declarative/registration.php
+ ```
+ <?php
+ \Magento\Framework\Component\ComponentRegistrar::register(
+     \Magento\Framework\Component\ComponentRegistrar::MODULE,
+     'BDC_Declarative',
+     __DIR__
+ );
+
+ ```
+
  - Create app/code/BDC/Declarative/etc/module.xml
+ ```
+ <?xml version="1.0"?>
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+     <module name="BDC_Declarative" setup_version="1.0.0"/>
+
+ </config>
+
+ ```
  - Create app/code/BDC/Declarative/etc/db_schema.xml
+ ```
+ <?xml version="1.0"?>
+ <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="bdc_declarative" resource="default" engine="innodb" comment="bdcrops declarative table">
+         <column xsi:type="smallint" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="ID"/>
+         <column xsi:type="varchar" name="name" nullable="false" length="25" comment="Name"/>
+         <column xsi:type="varchar" name="email" nullable="false" length="25" comment="Email"/>
+         <column xsi:type="varchar" name="note" nullable="false" length="255" comment="Descrition"/>
+         <column xsi:type="timestamp" name="created"  comment="Time of event"/>
+         <column xsi:type="timestamp" name="date_closed"  comment="Time of event"/>
+         <constraint xsi:type="primary" referenceId="PRIMARY">   <column name="id"/> </constraint>
+     </table>
+ </schema>
+
+ ```
  - Create app/code/BDC/Declarative/Setup/Schema/Sample.php
+ ```
+ <?php
+ declare(strict_types=1);
+
+ namespace BDC\Declarative\Setup\Patch\Schema;
+
+ use Magento\Framework\Setup\Patch\SchemaPatchInterface;
+ use Magento\Framework\Setup\ModuleDataSetupInterface;
+ /**
+ * Patch is mechanism, that allows to do atomic upgrade data changes
+ */
+ class Sample implements SchemaPatchInterface{
+     /**
+      * @var ModuleDataSetupInterface $moduleDataSetup
+      */
+     private $moduleDataSetup;
+     /**
+      * @param ModuleDataSetupInterface $moduleDataSetup
+      */
+     public function __construct(ModuleDataSetupInterface $moduleDataSetup) {
+         $this->moduleDataSetup = $moduleDataSetup;
+     }
+     /**
+      * Do Upgrade
+      *
+      * @return void
+      */
+     public function apply() { }
+     /**
+      * {@inheritdoc}
+      */
+     public function getAliases() { return []; }
+     /**
+      * {@inheritdoc}
+      */
+     public static function getDependencies() { return [ ]; }
+ }
+
+ ```
+
  - Create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php
+ ```
+ <?php
+ declare(strict_types=1);
+ namespace BDC\Declarative\Setup\Patch\Data;
+
+ use Magento\Framework\Setup\Patch\DataPatchInterface;
+ use Magento\Framework\Setup\ModuleDataSetupInterface;
+ /**
+  * Class NonRevertable
+  * @package BDC\Declarative\Setup\Patch\Data
+  */
+ class NonRevertable implements DataPatchInterface{
+     /**
+      * @var ModuleDataSetupInterface $moduleDataSetup
+      */
+     private $moduleDataSetup;
+     /**
+      * @param ModuleDataSetupInterface $moduleDataSetup
+      */
+     public function __construct(ModuleDataSetupInterface $moduleDataSetup){
+         $this->moduleDataSetup = $moduleDataSetup;
+     }
+     /**
+      * Do Upgrade
+      * @return void
+      */
+     public function apply(){
+         $data = ['name' => 'Matin Rahman', 'email' => 'matinict@gmail.com','note' => 'Declarative insert'];
+         $this->moduleDataSetup->getConnection()->insert('bdc_declarative', $data);
+     }
+     /**
+      * {@inheritdoc}
+      */
+     public function getAliases(){ return []; }
+     /**
+      * {@inheritdoc}
+      */
+     public static function getDependencies(){ return []; }
+ }
+
+ ```
  - Create app/code/BDC/Declarative/Setup/Patch/Data/Revertable.php
+ ```
+ <?php
+ declare(strict_types=1);
+
+ namespace BDC\Declarative\Setup\Patch\Data;
+
+ use Magento\Framework\Setup\Patch\DataPatchInterface;
+ use Magento\Framework\Setup\ModuleDataSetupInterface;
+ /**
+  * Class Revertable
+  * @package BDC\Declarative\Setup\Patch\Data
+  */
+ class Revertable implements DataPatchInterface {
+     /**
+      * @var ModuleDataSetupInterface $moduleDataSetup
+      */
+     private $moduleDataSetup;
+
+     /**
+      * @param ModuleDataSetupInterface $moduleDataSetup
+      */
+     public function __construct(ModuleDataSetupInterface $moduleDataSetup)
+     {
+         $this->moduleDataSetup = $moduleDataSetup;
+     }
+
+     /**
+      * Do Upgrade
+      *
+      * @return void
+      */
+     public function apply() { }
+
+     /**
+      * {@inheritdoc}
+      */
+     public function getAliases() { return []; }
+     /**
+      * {@inheritdoc}
+      */
+     public static function getDependencies() { return [ ]; }
+ }
+
+ ```
 
 
-## 3 Declarative Schema FAQ
+## 3.  Declarative Schema FAQ
 
 - 3.1 create table
 
