@@ -119,6 +119,10 @@ php bin/magento setup:di:compile
  </schema>
 
  ```
+  file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
+
+ ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+
  - Create app/code/BDC/Declarative/Setup/Schema/Sample.php
  ```
  <?php
@@ -247,6 +251,27 @@ php bin/magento setup:di:compile
  }
 
  ```
+-  Run
+ A schema whitelist:You will not be able to run a declarative mode without creating a schema whitelist.
+Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
+For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
+
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+
+```
+php bin/magento setup:db-declaration:generate-whitelist [options]
+php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
+php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+```
+
+Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
+ Insert data NonRevertable.php & Revertable.php
+
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+```
+Run php bin/magento setup:upgrade 
+```
+![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
 
 ## 3.  Declarative Schema FAQ
@@ -290,43 +315,6 @@ Issues with Setup Scripts
 
 ### create table
 
-Firstly create a magento 2 basic module with file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
-
-![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
-
-
-
--  3.2 A schema whitelist
-
-You will not be able to run a declarative mode without creating a schema whitelist.
-Note: it is recommended to generate a new whitelist for every release for the double-check purposes.
-
-Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
-
-For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
-
-
-![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
-
-```
-php bin/magento setup:db-declaration:generate-whitelist [options]
-php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
-php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
-```
-
-Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
-
-
-- 3.3  Insert data
-
-create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php & Revertable.php
-
-
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
-
-Run php bin/magento setup:upgrade then
-
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
 
 
