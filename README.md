@@ -44,14 +44,18 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
 
-[![Latest Stable Version](https://poser.pugx.org/bdcrops/module-declarative/v/stable)](https://packagist.org/packages/bdcrops/module-declarative)
-[![Total Downloads](https://poser.pugx.org/bdcrops/module-declarative/downloads)](https://packagist.org/packages/bdcrops/module-declarative)
 
 
 
 ### 1.2. Install via composer
 
 We recommend you to install BDC_Declarative module via composer. It is easy to install, update and maintaince.Run the following command in Magento 2 root folder.
+
+https://packagist.org/packages/bdc/module-declarative
+
+```
+composer require bdc/module-declarative
+```
 
 ### 1.3  Install & Upgrade
 
