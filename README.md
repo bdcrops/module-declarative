@@ -269,10 +269,11 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 ```
-Run php bin/magento setup:upgrade 
+Run php bin/magento setup:upgrade
 ```
 ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
+***
 
 ## 3.  Declarative Schema FAQ
 
@@ -305,26 +306,12 @@ Issues with Setup Scripts
  • Support for rollbacks *
  ![Declarative Schema Offers](docs/magento-2-declarative-schema-12-638.jpg)
 
-###
-
-###
-
-###
-
-###
-
-### create table
-
-
-
-
-
-- 3.4. How to Create a table?
-
+### How Declaring/Create a table?
+![Declaring a table](docs/magento-2-declarative-schema-18-638.jpg)
 The below example creates the declarative_table table with four columns. The id_column column is the primary key.
 ```
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+                xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
 +    <table name="declarative_table">
 +        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
 +        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
@@ -338,7 +325,148 @@ The below example creates the declarative_table table with four columns. The id_
 ```
 When creating a new table, remember to generate the db_schema_whitelist.json file.
 
-- 3.5 How to Drop a table?
+### What is <table/> Attributes ?
+#### <table/> Attributes
+  • name – Name of the table – Required
+  • resource (default) – Database connection to use for the operation – Allowed values – default, sales, checkout
+  • engine (innodb) – MySQL Table engine – Allowed values – innodb, memory
+
+![Attributes](docs/magento-2-declarative-schema-19-638.jpg)
+#### <table/> Attributes (Contd)
+• comment (not comments added) – Comment Relating the table
+• charset (utf8) – Charset for the table
+• collation (utf8_general_ci) – Collation to match the charset
+• onCreate (empty) – Helps trigger a task after the table is created
+![Attributes (Contd)](docs/magento-2-declarative-schema-20-638.jpg)
+
+### What is  integer columns?
+
+![](docs/magento-2-declarative-schema-23-638.jpg)
+![](docs/magento-2-declarative-schema-24-638.jpg)
+
+### How Declaring integer columns?
+
+![](docs/magento-2-declarative-schema-22-638.jpg)
+
+
+### How Declaring text columns?
+![](magento-2-declarative-schema-26-638.jpg)
+
+###  What is   <column/> Text Attributes ?
+
+• name – Name of the Column – Required
+• xsi:type – Allowed Values – (varchar, text, mediumtext, longtext) – Required
+• default – Provide default column value – Can provided only for varchar
+• length – Length of the field – varchar allowed max length is 1024 – text mediumtext longtext length can’t be defined
+
+![](docs/magento-2-declarative-schema-27-638.jpg)
+![](docs/magento-2-declarative-schema-28-638.jpg)
+
+###  How Declaring binary columns?
+
+![](docs/magento-2-declarative-schema-30-638.jpg)
+
+### Whats is binary or <column/> Text Attributes ?
+• xsi:type – Allowed Values – (varbinary, blob, mediumblob, longblob) – Required
+• default – Provide default column value – Can provided only for varbinary
+• length – Length of the field – varbinary allowed max length is 255 – blob mediumblob longblob length can’t be defined
+• comment (no comments are added) – Comment for the column
+
+![](docs/magento-2-declarative-schema-31-638.jpg)
+![](docs/magento-2-declarative-schema-32-638.jpg)
+
+
+###   Declaring decimal columns?
+![](docs/magento-2-declarative-schema-34-638.jpg)
+
+###  decimal or <column/> Text Attributes ?
+
+![](docs/magento-2-declarative-schema-35-638.jpg)
+![](docs/magento-2-declarative-schema-36-638.jpg)
+
+### Declaring a time column?
+
+![](DOCS/magento-2-declarative-schema-38-638.jpg)
+
+###  time or  <column/> Text Attributes ?
+• name – Name of the column – Required
+• xsi:type – Allowed Values – (timestamp, datetime, date) – Required
+• default – Provide default column value – Allowed Values – (CURRENT_TIMESTAMP, 0, NULL)
+• comment (no comments are added) – Comment for the column
+• on_update (false) – MySQL on update will be implemented
+![](docs/magento-2-declarative-schema-39-638.jpg)
+![](docs/magento-2-declarative-schema-40-638.jpg)
+
+###  Declaring a primary key?
+![](docs/magento-2-declarative-schema-42-638.jpg)
+
+###  Declaring a foreign key?
+![](docs/magento-2-declarative-schema-44-638.jpg)
+
+
+###  Declaring a unique key?
+![](docs/magento-2-declarative-schema-46-638.jpg)
+
+###  Declaring an index?
+![](docs/magento-2-declarative-schema-48-638.jpg)
+
+###  <index/> Attributes?
+![](docs/magento-2-declarative-schema-49-638.jpg)
+
+###  How Generating db_schema_whitelist.json?
+![](docs/magento-2-declarative-schema-51-638.jpg)
+
+###  <module_root>/etc/db_schema_whitelist.json?
+![](docs/magento-2-declarative-schema-52-638.jpg)
+![](docs/magento-2-declarative-schema-54-638.jpg)
+
+
+###  Testing with dry-run?
+![](docs/magento-2-declarative-schema-56-638.jpg)
+![](docs/magento-2-declarative-schema-57-638.jpg)
+
+###  var/log/dry-run-installation.log?
+![](docs/magento-2-declarative-schema-59-638.jpg)
+
+###  Applying Database Schema?
+![](docs/magento-2-declarative-schema-61-638.jpg)
+
+### Modifying the table column?
+![](docs/magento-2-declarative-schema-63-638.jpg)
+![](docs/magento-2-declarative-schema-64-638.jpg)
+![](docs/magento-2-declarative-schema-65-638.jpg)
+
+
+###  Testing with safe-mode  Destructive Operations ?
+• Deleting a table
+• Deleting a column
+• Reducing column length
+• Changing column precision
+• Changing column type
+![](docs/magento-2-declarative-schema-67-638.jpg)
+![](docs/magento-2-declarative-schema-68-638.jpg)
+
+###  var/declarative_dumps_csv/ {column_name_column_type_other_dimensions}.csv var/declarative_dumps_csv/{table_name}.csv?
+![](docs/magento-2-declarative-schema-69-638.jpg)
+
+###  Restoring Schema Data?
+![](docs/magento-2-declarative-schema-71-638.jpg)
+
+###  Uninstalling a Module?
+![](docs/magento-2-declarative-schema-73-638.jpg)
+
+###  Converting Setup Script to Declarative Schema?
+![](docs/magento-2-declarative-schema-75-638.jpg)
+
+###  Limitations of Declarative Schema?
+
+ • Custom DDL operations are ignored. It supports only DDL operations that are present in MagentoFrameworkDBAdapterPdoMysql
+ • Raw SQL in InstallSchema or UpgradeSchema scripts are ignored.
+ • DDL statements in the Recurring file won’t be transferred to the new schema because the file needs to run during each installation or upgrade.
+![](docs/magento-2-declarative-schema-76-638.jpg)
+
+
+### 3.5 How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
 ```
