@@ -466,6 +466,81 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](docs/magento-2-declarative-schema-76-638.jpg)
 
 
+
+### What is Schema Patch?
+
+![](docs/magento-23-schema-and-data-patches-6-638.jpg)
+
+### Where do we define Schema Patch?
+![](docs/magento-23-schema-and-data-patches-8-638.jpg)
+![](docs/magento-23-schema-and-data-patches-9-638.jpg)
+
+###  Methods we will implement?
+![](docs/magento-23-schema-and-data-patches-10-638.jpg)
+![](docs/magento-23-schema-and-data-patches-11-638.jpg)
+![](docs/magento-23-schema-and-data-patches-11-638.jpg)
+![](docs/magento-23-schema-and-data-patches-12-638.jpg)
+![](docs/magento-23-schema-and-data-patches-13-638.jpg)
+![](docs/magento-23-schema-and-data-patches-14-638.jpg)
+![](docs/magento-23-schema-and-data-patches-15-638.jpg)
+![](docs/magento-23-schema-and-data-patches-16-638.jpg)
+
+### How Applying the Schema Patch?   
+![](docs/magento-23-schema-and-data-patches-18-638.jpg)
+
+
+### What happened behind the scenes after Applying the Schema Patch?  
+![](docs/magento-23-schema-and-data-patches-20-638.jpg)
+![](docs/magento-23-schema-and-data-patches-21-638.jpg)
+
+###   What is Data Patch?
+![](docs/magento-23-schema-and-data-patches-23-638.jpg)
+
+### Where do we define Data Patch file ?  
+![](docs/magento-23-schema-and-data-patches-25-638.jpg)
+![](docs/magento-23-schema-and-data-patches-26-638.jpg)
+![](docs/magento-23-schema-and-data-patches-26-638.jpg)
+![](docs/magento-23-schema-and-data-patches-27-638.jpg)
+![](docs/magento-23-schema-and-data-patches-28-638.jpg)
+
+
+### What is Version Patch?
+Versions Patches
+• It is used for backwards compatibility with older setup scripts
+• A version number can be defined
+• Magento checks if setup module version
+• If the version of the module is higher than the version specified in your patch, then the patch is skipped
+• If the version in the database is equal or lower, then the patch installs.
+• It is marked as deprecated  
+![](docs/magento-23-schema-and-data-patches-30-638.jpg)
+
+### How to convert a schema/patch into a version patch ?
+
+![](docs/magento-23-schema-and-data-patches-32-638.jpg)
+
+###   What is Revertable Patch?
+Revertable Patches
+• Patches can be reverted at the time of removing the module
+• Single patches cannot be reverted
+• Module uninstall needed to be triggered
+• This feature is still buggy and changes are happening
+
+![](docs/magento-23-schema-and-data-patches-34-638.jpg)
+
+### How to convert a schema/patch into a revertable patch ?   
+![](docs/magento-23-schema-and-data-patches-36-638.jpg)
+
+### How to uninstall a module ?
+![](docs/magento-23-schema-and-data-patches-38-638.jpg)
+
+### New CLI Command  Generating Patches?
+![](docs/magento-23-schema-and-data-patches-40-638.jpg)
+![](docs/magento-23-schema-and-data-patches-41-638.jpg)
+
+
+
+
+
 ### 3.5 How to Drop a table?
 
 To drop declarative_table table was completely removed from the db-schema.xml file.
