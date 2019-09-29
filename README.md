@@ -4,8 +4,8 @@ Declarative Schema: Magento 2.3x introduced a new declarative schema feature whi
 
 Most module developers will be familiar with creating php scripts for creating, updating and manipulating custom tables for their modules. These files would live in the module directory here;
 
-/app/code/NameSpace/ModuleName/Setup/InstallSchema.php
-/app/code/NameSpace/ModuleName/Setup/UpgradeSchema.php
+- /app/code/NameSpace/ModuleName/Setup/InstallSchema.php
+- /app/code/NameSpace/ModuleName/Setup/UpgradeSchema.php
 
 Since Magento 2.3.0, you can now use the declarative DB schema XML to create and update your DB tables in a single XML file. This file is placed in your module here;
 
@@ -44,9 +44,6 @@ php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
 
-
-
-
 ### 1.2. Install via composer
 
 We recommend you to install BDC_Declarative module via composer. It is easy to install, update and maintaince.Run the following command in Magento 2 root folder.
@@ -58,8 +55,6 @@ composer require bdc/module-declarative
 ```
 
 ### 1.3  Install & Upgrade
-
-Run
 ```
 composer config repositories.module-declarative git
 https://github.com/bdcrops/module-declarative.git
@@ -228,8 +223,7 @@ php bin/magento setup:di:compile
      /**
       * @param ModuleDataSetupInterface $moduleDataSetup
       */
-     public function __construct(ModuleDataSetupInterface $moduleDataSetup)
-     {
+     public function __construct(ModuleDataSetupInterface $moduleDataSetup){
          $this->moduleDataSetup = $moduleDataSetup;
      }
 
@@ -809,4 +803,4 @@ See Above FAQ
 - [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/)
 
 - [onilabblog](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/)
-- [slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema)
+- [](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema)
