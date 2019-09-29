@@ -262,6 +262,7 @@ For that, you need a //etc/db_schema_whitelist.json file that will store all the
 php bin/magento setup:db-declaration:generate-whitelist [options]
 php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
 php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+php bin/magento setup:upgrade --dry-run=1 --keep-generated
 ```
 
 Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
