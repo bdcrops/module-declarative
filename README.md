@@ -967,4 +967,4 @@ Old scripts will work with new versions of Magento. However, if you want to conv
 - [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/)
 
 - [onilabblog](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/)
-- [](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema)
+ 
