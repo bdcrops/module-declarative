@@ -774,27 +774,191 @@ It is possible to drop a column only if it exists in the db_schema_whitelist.jso
 "Declarative Schema" is used when you need to create a NEW table inside Magento. With declarative schema you have the advantages of mutations.
 "Extension Attributes" are used to add new fields inside an EXISTING table. In this way you don't extend the original model.So in the above example, the best approach is to use Extension Attributes. magento-2-what-are-extension-attributes
 
-### How do you add an index or foreign key using declarative schema?
 
-See Above FAQ
+### How do you add an index ?
+
+Add an index: The following example adds the INDEX_SEVERITY index to the declarative_table table.
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="tinytext" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
++       <index referenceId="INDEX_SEVERITY" indexType="btree">
++           <column name="severity"/>
++       </index>
+    </table>
+</schema>
+```
+
+
+### How do You add  foreign key using declarative schema?
+
+- Create a foreign key
+In the following example, the selected constraint node defines the characteristics of the FL_ALLOWED_SEVERITIES foreign key.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
++       <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
++               column="severity" referenceTable="severities" referenceColumn="severity_identifier"
++               onDelete="CASCADE"/>
+    </table>
+</schema>
+```
+- Drop a foreign key
+The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting its constraint node. To drop a constraint declared in another module, redeclare it with the disabled attribute set to true.
+
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="int" name="severity" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="timestamp" name="time_occurred" padding="10" comment="Time of event"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+-       <constraint xsi:type="foreign" referenceId="FL_ALLOWED_SEVERITIES" table="declarative_table"
+-               column="severity" referenceTable="severities" referenceColumn="severity_identifier"
+-               onDelete="CASCADE"/>
+    </table>
+</schema>
+```
+It is possible to drop a foreign key only if it exists in the db_schema_whitelist.json file.
+
+- Recreate a foreign key
+In this example, Module A defines a new table with primary key id_column. Module B declares its own schema, in which it creates a new column (new_id_column) and changes the primary index to this column. Module B disables the original primary key and sets a new primary key with a referenceId value that is different from PRIMARY. Although this value is different, the real name of the primary key in the database remains PRIMARY.
+
+Module A declaration
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
+Module B declaration
+```
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="declarative_table">
+        <column xsi:type="int" name="new_id_column" padding="10" unsigned="true" nullable="false"
+                comment="New Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY" disabled="true"/>
+        <constraint xsi:type="primary" referenceId="NEW_PRIMARY">
+            <column name="new_id_column"/>
+        </constraint>
+    </table>
+</schema>
+```
 
 ### How do you manipulate data using data patches?
 
-See Above FAQ
+A data patch is a class that contains data modification instructions. It is defined in a <Vendor>/<Module_Name>/Setup/Patch/Data/<Patch_Name>.php file and implements \Magento\Framework\Setup\Patch\DataPatchInterface.
+
 
 ### What is the purpose of schema patches?
 
- See Above FAQ
+A schema patch contains custom schema modification instructions. These modifications can be complex. It is defined in a <Vendor>/<Module_Name>/Setup/Patch/Schema/<Patch_Name>.php file and implements \Magento\Framework\Setup\Patch\SchemaPatchInterface.
+
+Unlike the declarative schema approach, patches will only be applied once. A list of applied patches is stored in the patch_list database table. An unapplied patch will be applied when running the setup:upgrade from the Magento CLI.
+
 
 ### How to manipulate columns and keys using declarative schema?  
 
+- Add a column to table
+The following example adds the date_closed column.
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/add-column.png)
+
+- Drop a column from a table
+The following example removes the date_closed column by deleting its column node.
+To drop a column declared in another module, redeclare it with the disabled attribute set to true.
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/remove-column.png)
+
+- Change the column type
+The following example changes the type of the title column from varchar to tinytext.
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/change-column-type.png)
+
+- Rename a column
+To rename a column, delete the original column declaration and create a new one.
+In the new declaration, use the onCreate attribute to specify which column to migrate data from.
+Use the following construction to migrate data from the same table.
+onCreate="migrateDataFrom(entity_id)"
+
+To migrate data from another table, specify a value similar to the following:
+onCreate="migrateDataFromAnotherTable(catalog_category_entity,entity_id)"
+ - Add an index
+The following example adds the INDEX_SEVERITY index to the table_name table.
+
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/add-index.png)
+- Create a foreign key
+In the following example, the selected constraint node defines the characteristics of the FL_ALLOWED_SEVERITIES foreign key.
+
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/create-fk.png)
+
+- Drop a foreign key
+The following example removes the FL_ALLOWED_SEVERITIES foreign key by deleting its constraint node.
+To drop a constraint declared in another module, redeclare it with the disabled attribute set to true.
+![](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.3/extension-dev-guide/declarative-schema/images/drop-fk.png)
+
 ### What is the purpose of whitelisting?
+
+Purpose of whitelisting:You will not be able to run a declarative mode without creating a schema whitelist. Since backward compatibility must be maintained, declarative schema doesn’t automatically delete database tables, columns or keys not defined in db_schema.xml.This is one of the reasons we have db_schema_whitelist.json. It shows a history of all tables, columns and keys added with declarative schema and it’s required for drop operations.  
+Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command. For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
+
+![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+
+```
+php bin/magento setup:db-declaration:generate-whitelist [options]
+php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
+php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+php bin/magento setup:upgrade --dry-run=1 --keep-generated
+```
+
+Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
+
+There are options you can add at the end of that command. For instance,  you can use “–module-name=YourModule” to specify the module you want to generate a whitelist for. Similarly, you could also set “–module-name=all” although it will generate a whitelist for all modules by default.  
 
 
 ###  How to use Data and Schema patches?
 
+- Data Patches:
+![](https://github.com/bdcrops/module-declarative/raw/master/docs/magento-23-schema-and-data-patches-23-638.jpg)
+![](https://github.com/bdcrops/module-declarative/raw/master/docs/magento-23-schema-and-data-patches-25-638.jpg)
+
+
+- Schema Patches :
+![](https://github.com/bdcrops/module-declarative/raw/master/docs/magento-23-schema-and-data-patches-6-638.jpg)
+
 
 ### How to manage dependencies between patch files?
+
+schema patch contains custom schema modification instructions. These modifications can be complex. It is defined in a <Vendor>/<Module_Name>/Setup/Patch/Schema/<Patch_Name>.php file and implements \Magento\Framework\Setup\Patch\SchemaPatchInterface.
+
+Unlike the declarative schema approach, patches will only be applied once. A list of applied patches is stored in the patch_list database table. An unapplied patch will be applied when running the setup:upgrade from the Magento CLI.
+
+Optionally, if you plan to enable rollback for your patch during module uninstallation, then you must implement \Magento\Framework\Setup\Patch\PatchRevertableInterface.
+
+Old scripts will work with new versions of Magento. However, if you want to convert your old scripts to the new format, implement \Magento\Framework\Setup\Patch\PatchVersionInterface. This interface allows you to specify the setup version of the module in your database. If the version of the module is higher than or equal to the version specified in your patch, then the patch is skipped. If the version in the database is lower, then the patch installs
 
 
 
