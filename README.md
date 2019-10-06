@@ -865,6 +865,14 @@ A schema patch contains custom schema modification instructions. These modificat
 
 Unlike the declarative schema approach, patches will only be applied once. A list of applied patches is stored in the patch_list database table. An unapplied patch will be applied when running the setup:upgrade from the Magento CLI.
 
+## Magento 2 Certified Professional Developer exam
+### 4.4 Demonstrate an ability to use declarative schema
+- How do you add a column using declarative schema?
+- How do you modify a table added by another module? ||
+- How do you delete a column?  ||
+- How do you add an index or foreign key using declarative schema? ||
+- How do you manipulate data using data patches?  
+- What is the purpose of schema patches?
 
 ### How to manipulate columns and keys using declarative schema?  
 
