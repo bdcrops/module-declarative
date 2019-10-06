@@ -498,7 +498,6 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](docs/magento-23-schema-and-data-patches-27-638.jpg)
 ![](docs/magento-23-schema-and-data-patches-28-638.jpg)
 
-
 ### What is Version Patch?
 Versions Patches
 • It is used for backwards compatibility with older setup scripts
@@ -541,6 +540,33 @@ To drop declarative_table table was completely removed from the db-schema.xml fi
         //Remove All Content, Table will be Drop after whitelist & Upgrade run
 </schema>
 ```
+### What is Top node?
+The top node represents the schema node, which is located in the schema.xsd file.
+
+<schema xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance”        xsi:noNamespaceSchemaLocation=”urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd”>
+
+The location of the schema.xsd file is: <magento_root_directory>/vendor/magento/framework/Setup/Declaration/Schema/etc/schema.xsd
+
+### What is  Table node?
+We can create more than one table in the same db_schema.xml file, each table node creates a new table in the database. A table node can contain the following attributes:
+- Name: The name of the table
+- Engine: SQL engine, this value must be InnoDB or memory.
+- Resource: The database shard on which to install the table. This value must be default, checkout, or sales.
+- Comment: Table comment
+The table node contains three different types of subnodes:
+- Column
+- Constraints
+- Index
+
+### What is Column node?
+The column node defines inside the table node, each column node has its own declaration. A column node can contain the following attributes:
+- Type: the column type should contain one of the blob (includes blob, mediumblob, longblob), boolean, date, datetime, int (includes smallint, bigint, tinyint), real (includes decimal, float, double, real), text (includes text, mediumtext, longtext), timestamp, varbinary, and varchar.
+- Name: name of the column
+- Padding: indicates the size of the integer column
+- Unsigned: indicates if the column contains positive and negative values or only positive values
+- Nullable: indicates if the column can be nullable
+- Comment: indicates the comment of the column
+- Length: indicates the length of a column
 
 ### How to Rename a table?
 
