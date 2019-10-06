@@ -26,7 +26,7 @@ This change is incredibly useful once you start playing with it. The php schema 
 
  - FAQ of Declarative Schema
 
- - Magento 2 Certified Associate Developer Exam
+ - Certified Associate/Professional Developer Questions & Solution
 
 
 
@@ -967,4 +967,3 @@ Old scripts will work with new versions of Magento. However, if you want to conv
 - [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/)
 
 - [onilabblog](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/)
- 
