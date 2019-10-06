@@ -274,31 +274,31 @@ Run php bin/magento setup:upgrade
 
 ### What is Declarative Schema ?
 
- Declarative Schema
+ [](Declarative Schema
  - Newer way of handling Setup Script Operations
  - Setup Scripts are still supported in 2.3.x versions (EOL unknown)
  - Might be Backported to 2.2.x newer versions
  - Declarative Schema and Setup Scripts don’t work together
- - If developing backwards compatible modules use Setup Script
+ - If developing backwards compatible modules use Setup Script)
 
 ![declarative-schema](docs/magento-2-declarative-schema-8-638.jpg)
 
 ### Why Declarative Schema ?
-Issues with Setup Scripts
+[](Issues with Setup Scripts
 - Setup Scripts get complicated to manage overtime
 - Module sequencing needs to be handled properly
 - Confusing to manage Install vs Upgrade scripts
 - Version number mishap happens
-- No Rollbacks
+- No Rollbacks)
 
 ![Issues with Setup Scripts](docs/magento-2-declarative-schema-10-638.jpg)
 
 ### Will Declarative Schema help ?
- Declarative Schema Offers
+ [](Declarative Schema Offers
  • Avoidance of missed/repeated SQL operations
  • Installation testing using dry-run mode
  • Performance optimization
- • Support for rollbacks *
+ • Support for rollbacks )
  ![Declarative Schema Offers](docs/magento-2-declarative-schema-12-638.jpg)
 
 ### How Declaring/Create a table?
@@ -322,16 +322,16 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 
 ### What is <table/> Attributes ?
 #### <table/> Attributes
-  • name – Name of the table – Required
+  [](• name – Name of the table – Required
   • resource (default) – Database connection to use for the operation – Allowed values – default, sales, checkout
-  • engine (innodb) – MySQL Table engine – Allowed values – innodb, memory
+  • engine (innodb) – MySQL Table engine – Allowed values – innodb, memory)
 
 ![Attributes](docs/magento-2-declarative-schema-19-638.jpg)
 #### <table/> Attributes (Contd)
-• comment (not comments added) – Comment Relating the table
+[](• comment (not comments added) – Comment Relating the table
 • charset (utf8) – Charset for the table
 • collation (utf8_general_ci) – Collation to match the charset
-• onCreate (empty) – Helps trigger a task after the table is created
+• onCreate (empty) – Helps trigger a task after the table is created)
 ![Attributes (Contd)](docs/magento-2-declarative-schema-20-638.jpg)
 
 ### What is  integer columns?
@@ -348,11 +348,11 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](magento-2-declarative-schema-26-638.jpg)
 
 ###  What is   <column/> Text Attributes ?
-
+[](
 • name – Name of the Column – Required
 • xsi:type – Allowed Values – (varchar, text, mediumtext, longtext) – Required
 • default – Provide default column value – Can provided only for varchar
-• length – Length of the field – varchar allowed max length is 1024 – text mediumtext longtext length can’t be defined
+• length – Length of the field – varchar allowed max length is 1024 – text mediumtext longtext length can’t be defined)
 
 ![](docs/magento-2-declarative-schema-27-638.jpg)
 ![](docs/magento-2-declarative-schema-28-638.jpg)
@@ -362,10 +362,10 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](docs/magento-2-declarative-schema-30-638.jpg)
 
 ### Whats is binary or <column/> Text Attributes ?
-• xsi:type – Allowed Values – (varbinary, blob, mediumblob, longblob) – Required
+[](• xsi:type – Allowed Values – (varbinary, blob, mediumblob, longblob) – Required
 • default – Provide default column value – Can provided only for varbinary
 • length – Length of the field – varbinary allowed max length is 255 – blob mediumblob longblob length can’t be defined
-• comment (no comments are added) – Comment for the column
+• comment (no comments are added) – Comment for the column)
 
 ![](docs/magento-2-declarative-schema-31-638.jpg)
 ![](docs/magento-2-declarative-schema-32-638.jpg)
@@ -384,11 +384,11 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](DOCS/magento-2-declarative-schema-38-638.jpg)
 
 ###  time or  <column/> Text Attributes ?
-• name – Name of the column – Required
+[](• name – Name of the column – Required
 • xsi:type – Allowed Values – (timestamp, datetime, date) – Required
 • default – Provide default column value – Allowed Values – (CURRENT_TIMESTAMP, 0, NULL)
 • comment (no comments are added) – Comment for the column
-• on_update (false) – MySQL on update will be implemented
+• on_update (false) – MySQL on update will be implemented)
 ![](docs/magento-2-declarative-schema-39-638.jpg)
 ![](docs/magento-2-declarative-schema-40-638.jpg)
 
@@ -433,11 +433,11 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 
 
 ###  Testing with safe-mode  Destructive Operations ?
-• Deleting a table
+[](• Deleting a table
 • Deleting a column
 • Reducing column length
 • Changing column precision
-• Changing column type
+• Changing column type)
 ![](docs/magento-2-declarative-schema-67-638.jpg)
 ![](docs/magento-2-declarative-schema-68-638.jpg)
 
@@ -454,10 +454,10 @@ When creating a new table, remember to generate the db_schema_whitelist.json fil
 ![](docs/magento-2-declarative-schema-75-638.jpg)
 
 ###  Limitations of Declarative Schema?
-
+[](
  • Custom DDL operations are ignored. It supports only DDL operations that are present in MagentoFrameworkDBAdapterPdoMysql
  • Raw SQL in InstallSchema or UpgradeSchema scripts are ignored.
- • DDL statements in the Recurring file won’t be transferred to the new schema because the file needs to run during each installation or upgrade.
+ • DDL statements in the Recurring file won’t be transferred to the new schema because the file needs to run during each installation or upgrade.)
 ![](docs/magento-2-declarative-schema-76-638.jpg)
 
 
