@@ -89,6 +89,9 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 
 ## DB ALL Question Sulotion
+
+****
+
 ## Magento 2 Certified Associate Developer-18%
 
 ### 4.1 Describe models, resource models & collections
