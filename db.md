@@ -73,22 +73,8 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 ***
 
+## Magento 2  DB ALL Question Sulotion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## DB ALL Question Sulotion
 
 ****
 
