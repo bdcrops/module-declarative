@@ -31,7 +31,7 @@
 - How do you add a column using declarative schema? [onilab](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/),[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html),
 [cedcommerce](https://cedcommerce.com/blog/declarative-schema-in-magento-2-3/),[](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html),[slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema),
 [stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/),[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/)
-- How do you modify a table added by another module???[mod-declarative](https://github.com/bdcrops/module-declarative#how-do-you-modify-a-table-added-by-another-module) [stackexchange](https://magento.stackexchange.com/questions/266635/magento-2-3-how-to-add-custom-column-to-customer-entity-table)
+- How do you modify a table added by another module???[mod-declarative](https://github.com/bdcrops/module-declarative#how-do-you-modify-a-table-added-by-another-module), [stackexchange](https://magento.stackexchange.com/questions/266635/magento-2-3-how-to-add-custom-column-to-customer-entity-table)
 - How do you delete a column?
 - How do you add an index or foreign key using declarative schema?
 - How do you manipulate data using data patches?
