@@ -13,17 +13,25 @@
 [etatvasoft](https://www.etatvasoft.com/blog/how-to-develop-crud-module-in-magento-2/)
 
 - What are the responsibilities of each of the ORM object types?
-- How do they relate to one another?
+[mageplaza](https://www.mageplaza.com/magento-2-module-development/how-to-create-crud-model-magento-2.html),[alanstorm](https://alanstorm.com/magento_2_crud_models_for_database_access/),
+[saviost](http://www.saviost.net/what-is-object-relation-mappingorm/),
+[magenticians](https://magenticians.com/magento-weekly-roundup-001/)
+- How do they relate to one another? [interactivated](https://www.interactivated.me/blog/what-is-repository-pattern-in-magento-2/),
+[excellencemagentoblog](http://excellencemagentoblog.com/blog/category/magento2-module-development-series/)
 
 ### 4.2 Describe Entity Load & Save
-- How entity load and save occurs?
-- How do you use the native Magento save/load process in the development process?
+- How entity load and save occurs?[github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5.%20Using%20the%20Entity-Attribute-Value%20-EAV-%20Model/2.%20Demonstrate%20ability%20to%20use%20EAV%20entity%20load%20and%20save.md)
+- How do you use the native Magento save/load process in the development process? [inchoo](https://inchoo.net/magento-2/cache/how-to-save-custom-data-cache-magento-2/)
+
 ### 4.3 Describe  filter, sort collections & repositories
-- How to filter, sort & specify the selected values for collections & repositories?
-- How do you select a subset of records from the database?
+- How to filter, sort & specify the selected values for collections & repositories?[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/),[mage2-blog](https://mage2-blog.com/magento-2-get-product-collection/)
+- How do you select a subset of records from the database? [mageplaza](https://www.mageplaza.com/devdocs/get-customer-collection-magento-2.html),[stackexchange](https://magento.stackexchange.com/questions/261154/search-criteria-builder-does-not-filter-an-out-of-stock-products?rq=1)
+
 ### 4.4 Demonstrate an ability to use declarative schema
-- How do you add a column using declarative schema?
-- How do you modify a table added by another module?
+- How do you add a column using declarative schema? [onilab](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/),[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html),
+[cedcommerce](https://cedcommerce.com/blog/declarative-schema-in-magento-2-3/),[](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html),[slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema),
+[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/),[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/)
+- How do you modify a table added by another module??? [stackexchange](https://magento.stackexchange.com/questions/266635/magento-2-3-how-to-add-custom-column-to-customer-entity-table)
 - How do you delete a column?
 - How do you add an index or foreign key using declarative schema?
 - How do you manipulate data using data patches?

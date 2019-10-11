@@ -729,7 +729,25 @@ When adding a new column into table, remember to generate the db_schema_whitelis
 
 ### How do you modify a table added by another module?
 
-See Above FAQ
+Suppose we want add new column name="referred_by" on core table customer_entity
+etc/db_schema.xml
+```
+--<?xml version="1.0"?>
+--<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+--This below content oly if exist declaration
+    <table name="customer_entity">
+    <column xsi:type="int" name="referred_by" padding="10" unsigned="true" nullable="false"
+    comment="Referred By"/>
+    <constraint xsi:type="foreign" referenceId= "CUSTOMER_ENTITY_REFERRED_BY_CUSTOMER_ENTITY_ENTITY_ID" table="customer_entity"
+    column="referred_by" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+
+--</schema>
+```
+Then run following command to generate db_schema_whitelist.json
+
+bin/magento setup:db-declaration:generate-whitelist
+Then run bin/magento setup:upgrade command.  You can modify code according to your requirement.
 
 ### How do you delete a column?
 
@@ -866,6 +884,7 @@ A schema patch contains custom schema modification instructions. These modificat
 Unlike the declarative schema approach, patches will only be applied once. A list of applied patches is stored in the patch_list database table. An unapplied patch will be applied when running the setup:upgrade from the Magento CLI.
 
 ## Magento 2 Certified Professional Developer exam
+
 ### 4.4 Demonstrate an ability to use declarative schema
 - How do you add a column using declarative schema?
 - How do you modify a table added by another module? ||
