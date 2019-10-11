@@ -3,14 +3,29 @@
 ## Magento 2 Certified Associate Developer-18%
 
 ### 4.1 Describe models, resource models & collections
-- Basic concepts of models, resource models, and collections?
+
+- Basic concepts of models, resource models & collections?
+ [codilar](https://www.codilar.com/blog/magento-2-models-resource-models-and-collections/),
+
+[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html),
+
+[codilar](https://www.codilar.com/blog/magento-2-models-resource-models-and-collections/),
+
+[spiredigital](https://www.spiredigital.com/views/magento-2-create-model-using-joined-sql-query/),
+
+[markshust](https://markshust.com/2019/01/22/magento-database-resource-model-not-persisting-on-save/),
+
+[etatvasoft](https://www.etatvasoft.com/blog/how-to-develop-crud-module-in-magento-2/)
+
+
 - What are the responsibilities of each of the ORM object types?
 - How do they relate to one another?
+
 ### 4.2 Describe Entity Load & Save
 - How entity load and save occurs?
 - How do you use the native Magento save/load process in the development process?
 ### 4.3 Describe  filter, sort collections & repositories
-- How to filter, sort, and specify the selected values for collections and repositories?
+- How to filter, sort & specify the selected values for collections & repositories?
 - How do you select a subset of records from the database?
 ### 4.4 Demonstrate an ability to use declarative schema
 - How do you add a column using declarative schema?
@@ -73,7 +88,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 ***
 
-## Magento 2  DB ALL Question Sulotion
+# Magento 2  DB ALL Question Solution
 
 
 ****
