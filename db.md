@@ -39,14 +39,27 @@
 - How do you manipulate data using data patches? [sushilkumar](https://www.sushilkumar.ind.in/blog/magento-2/declarative-schema-feature-in-magento-2/),
 
 - What is the purpose of schema patches?
+[](https://github.com/bdcrops/module-declarative#what-is-the-purpose-of-schema-patches)
 
 ## Magento 2 Certified Professional Developer-7%
 
 ### 4.1 Demonstrate ability to use data-related classes
-- Describe repositories and data API classes.
-- How do you obtain an object or set of objects from the database using a repository?
+- Describe repositories & data API classes? [belvg](https://belvg.com/blog/how-to-use-data-related-classes-repositories-and-data-api-in-magento-2.html) ,[vinaikopp](http://vinaikopp.com/2017/02/18/magento2_repositories_interfaces_and_webapi/),[]()
+- How do you obtain an object or set of objects from the database using a repository? [dzone](https://dzone.com/articles/implementing-data-repositories),[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/searching-with-repositories.html)
 - How do you configure and create a SearchCriteria instance using the builder?
+[medium](https://medium.com/@dannynimmo/how-to-use-the-repository-pattern-in-magento-2-4914caa67eaa),
+[alanstorm](https://alanstorm.com/magento_2_understanding_object_repositories/),
+[stackexchange](https://magento.stackexchange.com/questions/107852/use-preconfigured-builders-e-g-for-searchcriteria-in-magento-2),
+[ipfs-sec](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/107852.html),
+[githubVinai](https://gist.github.com/Vinai/45281197672cd22cccf8),
+[scommerce](https://www.scommerce-mage.com/blog/magento2-condition-type-search-filter.html),
+[ibnab](https://www.ibnab.com/en/blog/magento-2/magento-2-for-developer-search-framwork),
+[webkul](https://webkul.com/blog/how-to-use-search-criteria-in-custom-module/)
 - How do you use Data/Api classes?
+[belvg](https://belvg.com/blog/how-to-use-data-related-classes-repositories-and-data-api-in-magento-2.html),
+[scommerce](https://www.scommerce-mage.com/blog/magento-2-how-to-create-custom-api.html),
+[inchoo](https://inchoo.net/magento-2/repository-pattern-in-magento-2/),
+[belvg](https://belvg.com/blog/how-to-use-data-related-classes-repositories-and-data-api-in-magento-2.html)
 - Describe how to create and register new entities?
 - How do you add a new table to the database?
 - Describe the entity load and save process?
