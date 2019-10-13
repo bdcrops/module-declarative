@@ -7,7 +7,6 @@
 - Basic concepts of models, resource models & collections?
  [codilar](https://www.codilar.com/blog/magento-2-models-resource-models-and-collections/),
 [belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html),
-[codilar](https://www.codilar.com/blog/magento-2-models-resource-models-and-collections/),
 [spiredigital](https://www.spiredigital.com/views/magento-2-create-model-using-joined-sql-query/),
 [markshust](https://markshust.com/2019/01/22/magento-database-resource-model-not-persisting-on-save/),
 [etatvasoft](https://www.etatvasoft.com/blog/how-to-develop-crud-module-in-magento-2/)
@@ -172,7 +171,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 - How to perform bulk save operations in Magento? [devdocs](https://devdocs.magento.com/guides/v2.3/rest/bulk-endpoints.html), [stackexchange](https://magento.stackexchange.com/questions/281723/magento-2-bulk-actions-not-starting), [itegration](https://itegration.com/tech/magento-bulk-api/), [meetanshi](https://meetanshi.com/blog/update-product-attributes-in-bulk-in-magento-2/), [webnexs](https://www.webnexs.com/blog/kb/add-update-multiple-records-database-magento-2/)
 
-- How to extend data object (Data API class) with an attribute that has values in a remote system? [magestore](https://www.magestore.com/magento-2-tutorial/magento-2-api-how-to-implement/), [scommerce](https://www.scommerce-mage.com/blog/magento-2-how-to-create-custom-api.html), [stackoverflow](https://stackoverflow.com/questions/55189662/how-do-i-pass-a-json-array-to-an-api-method)
+- How to extend data object (Data API class) with an attribute that has values in a remote system? [codilar]https://www.codilar.com/blog/data-objects-magento-2/ [magestore](https://www.magestore.com/magento-2-tutorial/magento-2-api-how-to-implement/), [scommerce](https://www.scommerce-mage.com/blog/magento-2-how-to-create-custom-api.html), [stackoverflow](https://stackoverflow.com/questions/55189662/how-do-i-pass-a-json-array-to-an-api-method)
 
 - How to extend exisitng WebAPI calls with a new parameter? [community](https://community.magento.com/t5/Magento-2-x-Programming/Rest-API-call-to-get-cartId-for-active-guest-user-and-logged-in/td-p/113444), [bizspice](https://www.bizspice.com/blog/post/create-or-develop-new-product-type-in-magento-2), [borngroup](https://www.borngroup.com/gen-2-headless-with-graphql/)
 - How to create a dynamic WebAPI ACL?[](https://www.phpro.be/en/rest-api-with-magento-2), [amasty](https://amasty.com/blog/magento-2-certification-configuration-files-visibility-areas/), [stackoverflow](https://stackoverflow.com/questions/21842866/magento-rest-api-create-method-resource-method-not-implemented)
