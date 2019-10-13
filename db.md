@@ -117,37 +117,45 @@ adding a new attribute, a new field in the database, or a new related entity?
 [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html)
 
 ### 5.1 Demonstrate ability to use EAV model concepts
-- Describe the EAV hierarchy structure.[]([](
+- Describe the EAV hierarchy structure. [docs](https://docs.magento.com/m2/ee/user_guide/stores/attribute-sets.html), [blog](http://blog.chapagain.com.np/magento-2-create-product-attribute-attribute-group-tab-attribute-set-programmatically/) , [meetanshi](https://meetanshi.com/blog/create-attribute-set-programmatically-in-magento-2/), [bsscommerce](https://bsscommerce.com/confluence/create-magento-2-product-attributes-custom-options-programmatically/) , [blogtreat](http://www.blogtreat.com/create-an-attribute-set-in-magento-2-via-installable-script/)
+
 - What happens when a new attribute is added to the system?[](
 - What is the role of attribute sets and attribute groups?[](
-- How are attributes presented in the admin?[](
-- Describe how EAV data storage works in Magento.[](
-- Which additional options do you have when saving EAV entities?[](
-- How do you create customizations based on changes to attribute values?[](
-- Describe the key differences between EAV and flat table collections.[](
-- In which situations would you use EAV for a new entity?[](
-- What are the pros and cons of EAV architecture?[](
+- How are attributes presented in the admin?[magestore](https://www.magestore.com/magento-2-tutorial/add-attributes-to-product-in-magento-2/), [planetwebsolution](https://www.planetwebsolution.com/blog/how-to-create-magento-2-attributes/), [meetanshi](https://meetanshi.com/blog/update-product-attributes-in-bulk-in-magento-2/)
+- Describe how EAV data storage works in Magento. [belvg](https://belvg.com/blog/how-to-manage-eav-attributes-including-interface-source-backend-structure-in-magento-2.html), [meigeeteam](https://meigeeteam.com/blog/where-to-find-all-attribute-properties-in-magento-2/)
+
+- Which additional options do you have when saving EAV entities? [ibnab](https://www.ibnab.com/en/blog/magento-2/magento-2-add-custom-eav-attribute-to-category-or-customer), [rakeshjesadiya](https://www.rakeshjesadiya.com/how-to-set-firstname-and-lastname-with-minimum-character-required-in-magento-2/)
+- How do you create customizations based on changes to attribute values? [meigeeteam](https://meigeeteam.com/blog/how-to-create-custom-product-attribute-in-magento-2/), [community](https://community.magento.com/t5/Find-an-Extension-that/How-To-Create-Customer-Custom-Attribute-In-Magento-2/td-p/115719)
+- Describe the key differences between EAV and flat table collections.[ipfs]( https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/105341.html), [amasty](https://amasty.com/blog/improve-magento-2-performance-with-flat-catalog/)
+- In which situations would you use EAV for a new entity? [meetanshi](https://www.magestore.com/magento-2-tutorial/category/magento-2-tips/), (https://meetanshi.com/blog/add-eav-attribute-for-product-magento-2/)
+- What are the pros and cons of EAV architecture? [magentoplanet](https://magentoplanet.wordpress.com/tag/advantages-and-disadvantages-of-eav-model/), [w3ctrl](http://www.w3ctrl.com/blog/most-important-magento-2-interview-quesion/), [amasty](https://amasty.com/blog/improve-magento-2-performance-with-flat-catalog/)
 
 ### 5.2 Demonstrate ability to use EAV entity load and save
-- Describe EAV load & save process and differences from flat table load & save process.[](
-- What happens when an EAV entity has too many attributes?[](
-- How does the number of websites/stores affect the EAV load/save process?[](
-- How would you customize  load & save process for an EAV entity in  situations described here? [](
+- Describe EAV load & save process and differences from flat table load & save process. [belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html),
+[siphor](https://www.siphor.com/magento-eav-loading-and-saving/), [stackexchange](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models), [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
+- What happens when an EAV entity has too many attributes? [stackoverflow](https://stackoverflow.com/questions/39195762/eav-is-bad-but-how-about-the-maintainability-of-class-table-inheritance)
+- How does the number of websites/stores affect the EAV load/save process? [progostech](https://progostech.com/how-to-increase-performance-and-handle-more-orders-on-your-magento-2-online-shop-during-the-holidays/)
+- How would you customize  load & save process for an EAV entity in  situations described here? [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
+
 
 ### 5.3 Demonstrate ability to manage attributes
-- Describe EAV attributes, including the frontend/source/backend structure.[](
-- How would you add dropdown/multiselect attributes?[](
-- What other possibilities do you have when adding an attribute (to a product, for example)?[](
-- Describe how to implement the interface for attribute frontend models.[](
-- What is the purpose of this interface?[](
-- How can you render your attribute value on the frontend?[](
-- Identify the purpose and describe how to implement the interface for attribute source models.[](
-- For a given dropdown/multiselect attribute, how can you specify and manipulate its list of options?[](
-- Identify the purpose and describe how to implement the interface for attribute backend models.[](
-- How (and why) would you create a backend model for an attribute?[](
-- Describe how to create and customize attributes.[](
-- How would you add a new attribute to the product, category or customer entities?[](
-- What is the difference between adding a new attribute and modifying an existing one?[](
+- Describe EAV attributes, including the frontend/source/backend structure. [belvg](  https://belvg.com/blog/how-to-manage-eav-attributes-including-interface-source-backend-structure-in-magento-2.html)
+- How would you add dropdown/multiselect attributes? [stackexchange](https://magento.stackexchange.com/questions/201226/create-product-attribute-of-type-multiselect-or-dropdown-select-create-option)
+- What other possibilities do you have when adding an attribute (to a product, for example)?[magestore](https://www.magestore.com/magento-2-tutorial/add-attributes-to-product-in-magento-2/)
+- Describe how to implement the interface for attribute frontend models. [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
+- What is the purpose of this interface?[devdocs](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.0/extension-dev-guide/attributes.html)
+- How can you render your attribute value on the frontend?[stackexchange](https://magento.stackexchange.com/questions/85453/product-attribute-front-end-html-not-rendering-properly)
+- Identify the purpose and describe how to implement the interface for attribute source models.[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/attributes.html)
+- For a given dropdown/multiselect attribute, how can you specify and manipulate its list of options?[devdocs](https://devdocs.magento.com/videos/fundamentals/add-new-product-attribute/)
+- Identify the purpose and describe how to implement the interface for attribute backend models.[github](https://github.com/magento/magento2/issues/23828)
+- How (and why) would you create a backend model for an attribute?[belvg](https://belvg.com/blog/how-eav-data-storage-works-in-magento-2-part-4.html)
+- Describe how to create and customize attributes.[devdocs](https://devdocs.magento.com/videos/fundamentals/add-new-product-attribute/)
+- How would you add a new attribute to the product, category or customer entities?[stackexchange](https://magento.stackexchange.com/questions/88245/magento-2-how-to-create-a-customer-custom-attribute),[magestore](https://blog.magestore.com/entity-attribute-value-in-magento/)
+- What is the difference between adding a new attribute and modifying an existing one?
+[zynovo](https://www.zynovo.com/blog/magento-2-extension-attributes/)
+[magecom](https://magecom.net/attributes-and-attribute-set-planning-creation-in-magento-2/)
+
+
 
 ## Magento 2 Certified Professional Developer Plus-14% +(EAV) Model 10%=24%
 
