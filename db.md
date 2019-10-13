@@ -152,17 +152,24 @@ adding a new attribute, a new field in the database, or a new related entity?
 ## Magento 2 Certified Professional Developer Plus-14% +(EAV) Model 10%=24%
 
 ### 3.1 Demonstrate Db Access Classes(models,repositories & data mappers)
-- Architectural layers of db  access classes, including models, repositories & data mappers?[](
-- Models, resource models, and collections in Magento, their impact on performance?[](
-- Repositories, SearchCriteria?[](
-- WebAPI, WebAPI access, extension attributes?[](
-- How to create an entity that supports extension attributes?[](
-- How to implement SearchCriteria processing in the repository::getList method?[](
-- How to perform bulk save operations in Magento?[](
-- How to extend data object (Data API class) with an attribute that has values in a remote system?[](
-- How to extend exisitng WebAPI calls with a new parameter?[](
-- How to create a dynamic WebAPI ACL?[](
-- The difference between extension attributes and custom attributes?[](
+- Architectural layers of db  access classes, including models, repositories & data mappers?[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html), [crosp](https://crosp.net/blog/software-architecture/clean-architecture-part-1-databse-vs-domain/
+), [devdocs](https://devdocs.magento.com/guides/v2.3/architecture/archi_perspectives/persist_layer.html)
+- Models, resource models, and collections in Magento, their impact on performance? [magenteiro](https://www.magenteiro.com/blog/magento-2/models-resource_models-collections/), [stackexchange](https://magento.stackexchange.com/questions/268974/magento-2-difference-between-model-resourcemodel-collection-and-repository), [hellomagento2](https://www.hellomagento2.com/pratices-tests-collections/
+- Repositories, SearchCriteria?[fishchenko] (https://fishchenko.com/blog/magento-2-join-table-in-orderrepositorygetlist-extension-attributes/), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why), [offset101](https://www.offset101.com/magento-2-x-manage-multiple-conditions-filter-filtergroups/), [ibnab](https://www.ibnab.com/en/blog/magento-2), [willfeeling](https://blog.willfeeling.com/2019/06/24/magento2-dump-questions-package-1/), [ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/200941.html)
+
+- WebAPI, WebAPI access, extension attributes? [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/webapi/request-processor-pool.html), [mageseller](https://www.mageseller.com/blog/extension-attributes-in-magento-2.html), [stackexchange](https://magento.stackexchange.com/questions/tagged/extension-attributes?sort=votes), [bizspice](https://www.bizspice.com/blog/post/magento-2-web-api-calls-explained), [belvg](https://belvg.com/blog/how-to-use-magento-2-api-documentation-examples-tutorial.html), [dckap](https://www.dckap.com/blog/extension-attributes-in-magento2/)
+
+- How to create an entity that supports extension attributes?[tigren](https://www.tigren.com/add-extension-attribute-magento-2/), [community](https://community.magento.com/t5/Magento-2-x-Programming/How-i-can-work-with-extension-attributes-using-collection/td-p/136765), [devdocs](https://devdocs.magento.com/guides/v2.3/graphql/queries/custom-attribute-metadata.html), [omsdocs](https://omsdocs.magento.com/en/features-processes/order-modification/custom-attributes/), [magentodeveloper](https://magentodeveloper.in/add-custom-attribute-to-customer-magento2.html)
+
+- How to implement SearchCriteria processing in the repository::getList method?[stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why), [rakeshjesadiya](https://www.rakeshjesadiya.com/how-to-get-list-of-customers-order-using-graphql-magento-2/), [fishchenko](https://fishchenko.com/blog/magento-2-join-table-in-orderrepositorygetlist-custom-field/), [devdocs](https://devdocs.magento.com/swagger/index_23.html)
+
+- How to perform bulk save operations in Magento? [devdocs](https://devdocs.magento.com/guides/v2.3/rest/bulk-endpoints.html), [stackexchange](https://magento.stackexchange.com/questions/281723/magento-2-bulk-actions-not-starting), [itegration](https://itegration.com/tech/magento-bulk-api/), [meetanshi](https://meetanshi.com/blog/update-product-attributes-in-bulk-in-magento-2/), [webnexs](https://www.webnexs.com/blog/kb/add-update-multiple-records-database-magento-2/)
+
+- How to extend data object (Data API class) with an attribute that has values in a remote system? [magestore](https://www.magestore.com/magento-2-tutorial/magento-2-api-how-to-implement/), [scommerce](https://www.scommerce-mage.com/blog/magento-2-how-to-create-custom-api.html), [stackoverflow](https://stackoverflow.com/questions/55189662/how-do-i-pass-a-json-array-to-an-api-method)
+
+- How to extend exisitng WebAPI calls with a new parameter? [community](https://community.magento.com/t5/Magento-2-x-Programming/Rest-API-call-to-get-cartId-for-active-guest-user-and-logged-in/td-p/113444), [bizspice](https://www.bizspice.com/blog/post/create-or-develop-new-product-type-in-magento-2), [borngroup](https://www.borngroup.com/gen-2-headless-with-graphql/)
+- How to create a dynamic WebAPI ACL?[](https://www.phpro.be/en/rest-api-with-magento-2), [amasty](https://amasty.com/blog/magento-2-certification-configuration-files-visibility-areas/), [stackoverflow](https://stackoverflow.com/questions/21842866/magento-rest-api-create-method-resource-method-not-implemented)
+- The difference between extension attributes and custom attributes?[stackexchange](https://magento.stackexchange.com/questions/215989/magento-2-what-is-difference-between-extension-attributes-and-custom-attribute), [atwix](https://www.atwix.com/magento-2/adding-custom-attribute-to-api-response-in-magento-2/), [dckap](https://www.dckap.com/blog/extension-attributes-in-magento2/), [zynovo](https://www.zynovo.com/blog/magento-2-extension-attributes/)
 
 ### 3.2 Demonstrate understanding of the staging workflow
 - Staging modification to the Magento database operations (row_id, entity managers)
