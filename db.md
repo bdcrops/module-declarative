@@ -69,11 +69,9 @@
 - Describe the entity load and save process?
 [stackexchange1](https://magento.stackexchange.com/questions/195682/what-and-why-is-the-proper-way-to-load-a-model),[stackexchange2](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models),[belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html)
 - Describe how to extend existing entities.
-[](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html
-7:49 AM
-https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.2/extension-dev-guide/extension_attributes/adding-attributes.html
-7:49 AM
-https://www.ashsmith.io/magento2/using-extension-attributes-with-products/
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html),
+[devdocs.github](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.2/extension-dev-guide/extension_attributes/adding-attributes.html),
+[ashsmith](https://www.ashsmith.io/magento2/using-extension-attributes-with-products/)
 
 - What mechanisms are available to extend existing classes, for example by
 adding a new attribute, a new field in the database, or a new related entity?
@@ -84,7 +82,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 - Describe how to filter, sort, and specify the selected values for collections & repositories?
 [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/searching-with-repositories.html),
 [ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/91023.html),
-[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/
+[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/)
 
 - How do you select a subset of records from the database?
 [](
