@@ -27,7 +27,7 @@
 - How to filter, sort & specify the selected values for collections & repositories?[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/),[mage2-blog](https://mage2-blog.com/magento-2-get-product-collection/)
 - How do you select a subset of records from the database? [mageplaza](https://www.mageplaza.com/devdocs/get-customer-collection-magento-2.html),[stackexchange](https://magento.stackexchange.com/questions/261154/search-criteria-builder-does-not-filter-an-out-of-stock-products?rq=1)
 
-### 4.4 Demonstrate an ability to use declarative schema [module-declarative](https://github.com/bdcrops/module-declarative)
+### 4.4 Demonstrate an ability to use declarative schema [ declarative](https://github.com/bdcrops/module-declarative)
 - How do you add a column using declarative schema? [onilab](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/),[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html),
 [cedcommerce](https://cedcommerce.com/blog/declarative-schema-in-magento-2-3/),[](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html),[slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema),
 [stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/),[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/)
@@ -67,7 +67,7 @@
 - How do you add a new table to the database?
 [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html)
 - Describe the entity load and save process?
-[stackexchange1](https://magento.stackexchange.com/questions/195682/what-and-why-is-the-proper-way-to-load-a-model),[stackexchange2](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models),[belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html)
+[stackexchange1](https://magento.stackexchange.com/questions/195682/what-and-why-is-the-proper-way-to-load-a-model), [stackexchange2](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models), [belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html)
 - Describe how to extend existing entities.
 [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html),
 [devdocs.github](https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.2/extension-dev-guide/extension_attributes/adding-attributes.html),
@@ -89,8 +89,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 [belvg](https://belvg.com/blog/magento-2-database-group-operations.html),
 [firebearstudio](https://firebearstudio.com/blog/magento-2-mysql-data-import.html)
 - Describe the database abstraction layer for Magento?
-[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html),[stackexchange](https://magento.stackexchange.com/questions/171317/magento-2-difference-between-models-and-data-models), [medium](https://medium.com/@matthewhaworth1/understanding-data-persistence-in-magento-2-d3fefafc4f2e
-), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why)
+[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html), [stackexchange](https://magento.stackexchange.com/questions/171317/magento-2-difference-between-models-and-data-models), [medium](https://medium.com/@matthewhaworth1/understanding-data-persistence-in-magento-2-d3fefafc4f2e), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why)
 - What type of exceptions does the database layer throw?
 [stackexchange1](https://magento.stackexchange.com/questions/119992/exception-handling-in-magento-2), [devdocs](https://devdocs.magento.com/guides/v2.3/graphql/develop/exceptions.html), [stackexchange2](https://magento.stackexchange.com/questions/187946/exception-message-in-magento-2?rq=1), [stackexchange3](https://magento.stackexchange.com/questions/187946/exception-message-in-magento-2),
 [mage2](https://mage2-blog.com/magento-2-display-success-and-error-messages/), [rollbar](https://rollbar.com/blog/magento-error-monitoring/)
@@ -117,11 +116,11 @@ adding a new attribute, a new field in the database, or a new related entity?
 [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html)
 
 ### 5.1 Demonstrate ability to use EAV model concepts
-- Describe the EAV hierarchy structure. [docs](https://docs.magento.com/m2/ee/user_guide/stores/attribute-sets.html), [blog](http://blog.chapagain.com.np/magento-2-create-product-attribute-attribute-group-tab-attribute-set-programmatically/) , [meetanshi](https://meetanshi.com/blog/create-attribute-set-programmatically-in-magento-2/), [bsscommerce](https://bsscommerce.com/confluence/create-magento-2-product-attributes-custom-options-programmatically/) , [blogtreat](http://www.blogtreat.com/create-an-attribute-set-in-magento-2-via-installable-script/)
+- Describe the EAV hierarchy structure. [docs](https://docs.magento.com/m2/ee/user_guide/stores/attribute-sets.html), [blog](http://blog.chapagain.com.np/magento-2-create-product-attribute-attribute-group-tab-attribute-set-programmatically/) , [meetanshi](https://meetanshi.com/blog/create-attribute-set-programmatically-in-magento-2/), [bsscommerce](https://bsscommerce.com/confluence/create-magento-2-product-attributes-custom-options-programmatically/) ,
 
-- What happens when a new attribute is added to the system?[](
-- What is the role of attribute sets and attribute groups?[](
-- How are attributes presented in the admin?[magestore](https://www.magestore.com/magento-2-tutorial/add-attributes-to-product-in-magento-2/), [planetwebsolution](https://www.planetwebsolution.com/blog/how-to-create-magento-2-attributes/), [meetanshi](https://meetanshi.com/blog/update-product-attributes-in-bulk-in-magento-2/)
+- What happens when a new attribute is added to the system? [magestore](https://www.magestore.com/magento-2-tutrial/add-attributes-to-product-in-magento-2/)
+- What is the role of attribute sets and attribute groups? [blogtreat](http://www.blogtreat.com/create-an-attribute-set-in-magento-2-via-installable-script/)
+- How are attributes presented in the admin? [planetwebsolution](https://www.planetwebsolution.com/blog/how-to-create-magento-2-attributes/), [meetanshi](https://meetanshi.com/blog/update-product-attributes-in-bulk-in-magento-2/)
 - Describe how EAV data storage works in Magento. [belvg](https://belvg.com/blog/how-to-manage-eav-attributes-including-interface-source-backend-structure-in-magento-2.html), [meigeeteam](https://meigeeteam.com/blog/where-to-find-all-attribute-properties-in-magento-2/)
 
 - Which additional options do you have when saving EAV entities? [ibnab](https://www.ibnab.com/en/blog/magento-2/magento-2-add-custom-eav-attribute-to-category-or-customer), [rakeshjesadiya](https://www.rakeshjesadiya.com/how-to-set-firstname-and-lastname-with-minimum-character-required-in-magento-2/)
