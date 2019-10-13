@@ -61,18 +61,42 @@
 [inchoo](https://inchoo.net/magento-2/repository-pattern-in-magento-2/),
 [belvg](https://belvg.com/blog/how-to-use-data-related-classes-repositories-and-data-api-in-magento-2.html)
 - Describe how to create and register new entities?
+[coolblueweb](https://coolblueweb.com/blog/adding-a-customer-attribute-programmatically-in-magento-2/),
+[blogtreat](http://www.blogtreat.com/how-to-add-new-customer-attribute-in-magento-2/)
+
 - How do you add a new table to the database?
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html)
 - Describe the entity load and save process?
+[stackexchange1](https://magento.stackexchange.com/questions/195682/what-and-why-is-the-proper-way-to-load-a-model),[stackexchange2](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models),[belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html)
 - Describe how to extend existing entities.
+[](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/extension_attributes/adding-attributes.html
+7:49 AM
+https://magento-devdocs.github.io/devdocs-for-tests/guides/v2.2/extension-dev-guide/extension_attributes/adding-attributes.html
+7:49 AM
+https://www.ashsmith.io/magento2/using-extension-attributes-with-products/
+
 - What mechanisms are available to extend existing classes, for example by
 adding a new attribute, a new field in the database, or a new related entity?
+[yireo](https://www.yireo.com/blog/2019-05-18-extending-magento2-classes-by-composition),
+[inchoo](https://inchoo.net/magento-2/overriding-classes-magento-2/),
+[magenest](https://store.magenest.com/blog/how-to-override-core-class-magento-2/)
+
 - Describe how to filter, sort, and specify the selected values for collections & repositories?
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/searching-with-repositories.html),
+[ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/91023.html),
+[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/
+
 - How do you select a subset of records from the database?
+[](
 - Describe the database abstraction layer for Magento?
+[](
 - What type of exceptions does the database layer throw?
+[](
 - What additional functionality does Magento provide over Zend_Adapter?
+[](
+
 ### 4.2 Demonstrate an ability to use declarative schema
-- Demonstrate use of schema.
+- Demonstrate use of declarative schema?
 - How to manipulate columns and keys using declarative schema?
 - What is the purpose of whitelisting?
 - How to use Data and Schema patches?
