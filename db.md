@@ -172,22 +172,28 @@ adding a new attribute, a new field in the database, or a new related entity?
 - The difference between extension attributes and custom attributes?[stackexchange](https://magento.stackexchange.com/questions/215989/magento-2-what-is-difference-between-extension-attributes-and-custom-attribute), [atwix](https://www.atwix.com/magento-2/adding-custom-attribute-to-api-response-in-magento-2/), [dckap](https://www.dckap.com/blog/extension-attributes-in-magento2/), [zynovo](https://www.zynovo.com/blog/magento-2-extension-attributes/)
 
 ### 3.2 Demonstrate understanding of the staging workflow
-- Staging modification to the Magento database operations (row_id, entity managers)
-- How does data versioning work? [](
-- Different possibilities of data versioning (row/table/database level) & implemented?
-- The role of the entity manager?[](
-- High level staging implementation overview?[](
+- Staging modification to the Magento database operations (row_id, entity managers) [stackexchange](https://magento.stackexchange.com/questions/139081/magento-2-what-is-the-difference-between-the-row-id-and-entity-id-in-the-enti)
+- How does data versioning work? [yireo](https://www.yireo.com/blog/2019-05-10-local-composer-development-with-magento2), [handybackup](https://www.handybackup.net/magento-backup.shtml)
+- Different possibilities of data versioning (row/table/database level) & implemented? [stackexchange](https://magento.stackexchange.com/questions/129879/magento2-database-changes-details-in-each-update)
+- The role of the entity manager? [yireo](https://www.yireo.com/blog/2016-07-18-working-with-the-new-magento-2-1-entity-manager), [stackexchange](https://magento.stackexchange.com/questions/127325/magento-2-1-using-the-entity-manager
+), [magentoextensions](https://www.magentoextensions.org/documentation/class_magento_1_1_framework_1_1_entity_manager_1_1_entity_manager.html), [hotexamples](https://hotexamples.com/examples/magento.framework.entitymanager/EntityManager/save/php-entitymanager-save-method-examples.html)
+
+- High level staging implementation overview?[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/staging.html), [devdocs](https://devdocs.magento.com/guides/v2.3/cloud/basic-information/starter-architecture.html)
+
 ### 3.3 Demonstrate an ability to use different types of setup scripts in Magento
-- Schema and data setup scripts, uninstall scripts, recurring scripts, uninstall schema vs. uninstall data? [](
-- What happens when an uninstall script is executed: data version change, deleted tables, etc? [](
-- Recurring scripts and their order in the setup:upgrade process?[](
-- Accessing areas and system configuration values in setup scrip?[](
+- Schema and data setup scripts, uninstall scripts, recurring scripts, uninstall schema vs. uninstall data? [inchoo](https://inchoo.net/magento-2/setup-scripts-magento-2/), [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/migration-commands.html)
+- What happens when an uninstall script is executed: data version change, deleted tables, etc? [inviqa](https://inviqa.com/blog/using-setup-scripts-magento-2)
+- Recurring scripts and their order in the setup:upgrade process? [dev98](https://dev98.de/2017/11/13/sequence-of-magento-2-install-upgrade-recurring-scripts/)
+- Accessing areas and system configuration values in setup scrip?[inviqa](https://inviqa.com/blog/how-use-system-configuration-and-helpers-magento-2)
+
+
 
 ### 4.1 Describe the EAV data access process in Magento
 - Getting an attribute instance, impact of attribute sets, large number of attributes and attribute sets? [](
 - What is the impact of 10,000 attribute sets? 1,000 attributes in a set?[](
 - How to get information about an attribute? [](
 - How to perform attribute operations programmatically: assign it to a set/group, update properties, etc? [](
+
 ### 4.2 Describe the database tables for EAV entities and how to create them
 - The EAV database structure, performance considerations, entity-level attribute properties (catalog_eav_attribute) [](
 - Where are catalog-specific attribute properties stored and what are they used for?[](
