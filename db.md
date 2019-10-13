@@ -85,106 +85,123 @@ adding a new attribute, a new field in the database, or a new related entity?
 [rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/)
 
 - How do you select a subset of records from the database?
-[](
+[stackexchange](https://magento.stackexchange.com/questions/109426/magento-2-how-to-select-fetch-data-from-database),
+[belvg](https://belvg.com/blog/magento-2-database-group-operations.html),
+[firebearstudio](https://firebearstudio.com/blog/magento-2-mysql-data-import.html)
 - Describe the database abstraction layer for Magento?
-[](
+[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html),[stackexchange](https://magento.stackexchange.com/questions/171317/magento-2-difference-between-models-and-data-models), [medium](https://medium.com/@matthewhaworth1/understanding-data-persistence-in-magento-2-d3fefafc4f2e
+), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why)
 - What type of exceptions does the database layer throw?
-[](
+[stackexchange1](https://magento.stackexchange.com/questions/119992/exception-handling-in-magento-2), [devdocs](https://devdocs.magento.com/guides/v2.3/graphql/develop/exceptions.html), [stackexchange2](https://magento.stackexchange.com/questions/187946/exception-message-in-magento-2?rq=1), [stackexchange3](https://magento.stackexchange.com/questions/187946/exception-message-in-magento-2),
+[mage2](https://mage2-blog.com/magento-2-display-success-and-error-messages/), [rollbar](https://rollbar.com/blog/magento-error-monitoring/)
 - What additional functionality does Magento provide over Zend_Adapter?
-[](
+[stackexchange](https://magento.stackexchange.com/questions/33981/magento-2-and-zend-framework-2/51464#51464
+), [zend](https://framework.zend.com/manual/2.1/en/modules/zend.db.adapter.html), [elgentos](https://elgentos.nl/blog/magento-2-and-PSRs-now-what)
 
 ### 4.2 Demonstrate an ability to use declarative schema
 - Demonstrate use of declarative schema?
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/)
 - How to manipulate columns and keys using declarative schema?
+[declarative](https://github.com/bdcrops/module-declarative#magento-2-certified-professional-developer-exam),
+[dckap](https://www.dckap.com/blog/declarative-schema-magento-2/)
+
 - What is the purpose of whitelisting?
+[declarative](https://github.com/bdcrops/module-declarative#what-is-the-purpose-of-whitelisting),
+[idslogic](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html)
+
 - How to use Data and Schema patches?
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html), [markshust](https://markshust.com/2019/02/19/create-product-attribute-data-patch-magento-2.3-declarative-schema/), [willfeeling](https://blog.willfeeling.com/2019/01/09/what-is-setup-path-data-on-magento-2-3/), [stagebit](https://stagebit.com/magento-2/declarative-schema-data-patch-magento-2-3/), [medium](https://medium.com/@mishra.anshu1710/how-to-add-a-category-attribute-using-data-patch-in-magento2-4031dcca15b0),
+[stackexchange](https://magento.stackexchange.com/questions/264788/magento-2-3-insert-data-into-table-using-declarativeschema)
+
 - How to manage dependencies between patch files?
+[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/data-patches.html)
 
 ### 5.1 Demonstrate ability to use EAV model concepts
-- Describe the EAV hierarchy structure.
-- What happens when a new attribute is added to the system?
-- What is the role of attribute sets and attribute groups?
-- How are attributes presented in the admin?
-- Describe how EAV data storage works in Magento.
-- Which additional options do you have when saving EAV entities?
-- How do you create customizations based on changes to attribute values?
-- Describe the key differences between EAV and flat table collections.
-- In which situations would you use EAV for a new entity?
-- What are the pros and cons of EAV architecture?
+- Describe the EAV hierarchy structure.[]([](
+- What happens when a new attribute is added to the system?[](
+- What is the role of attribute sets and attribute groups?[](
+- How are attributes presented in the admin?[](
+- Describe how EAV data storage works in Magento.[](
+- Which additional options do you have when saving EAV entities?[](
+- How do you create customizations based on changes to attribute values?[](
+- Describe the key differences between EAV and flat table collections.[](
+- In which situations would you use EAV for a new entity?[](
+- What are the pros and cons of EAV architecture?[](
 
 ### 5.2 Demonstrate ability to use EAV entity load and save
-- Describe EAV load & save process and differences from flat table load & save process.
-- What happens when an EAV entity has too many attributes?
-- How does the number of websites/stores affect the EAV load/save process?
-- How would you customize  load & save process for an EAV entity in  situations described here?
+- Describe EAV load & save process and differences from flat table load & save process.[](
+- What happens when an EAV entity has too many attributes?[](
+- How does the number of websites/stores affect the EAV load/save process?[](
+- How would you customize  load & save process for an EAV entity in  situations described here? [](
 
 ### 5.3 Demonstrate ability to manage attributes
-- Describe EAV attributes, including the frontend/source/backend structure.
-- How would you add dropdown/multiselect attributes?
-- What other possibilities do you have when adding an attribute (to a product, for example)?
-- Describe how to implement the interface for attribute frontend models.
-- What is the purpose of this interface?
-- How can you render your attribute value on the frontend?
-- Identify the purpose and describe how to implement the interface for attribute source models.
-- For a given dropdown/multiselect attribute, how can you specify and manipulate its list of options?
-- Identify the purpose and describe how to implement the interface for attribute backend models.
-- How (and why) would you create a backend model for an attribute?
-- Describe how to create and customize attributes.
-- How would you add a new attribute to the product, category or customer entities?
-- What is the difference between adding a new attribute and modifying an existing one?
+- Describe EAV attributes, including the frontend/source/backend structure.[](
+- How would you add dropdown/multiselect attributes?[](
+- What other possibilities do you have when adding an attribute (to a product, for example)?[](
+- Describe how to implement the interface for attribute frontend models.[](
+- What is the purpose of this interface?[](
+- How can you render your attribute value on the frontend?[](
+- Identify the purpose and describe how to implement the interface for attribute source models.[](
+- For a given dropdown/multiselect attribute, how can you specify and manipulate its list of options?[](
+- Identify the purpose and describe how to implement the interface for attribute backend models.[](
+- How (and why) would you create a backend model for an attribute?[](
+- Describe how to create and customize attributes.[](
+- How would you add a new attribute to the product, category or customer entities?[](
+- What is the difference between adding a new attribute and modifying an existing one?[](
 
 ## Magento 2 Certified Professional Developer Plus-14% +(EAV) Model 10%=24%
 
 ### 3.1 Demonstrate Db Access Classes(models,repositories & data mappers)
-- Architectural layers of db  access classes, including models, repositories & data mappers?
-- Models, resource models, and collections in Magento, their impact on performance?
-- Repositories, SearchCriteria?
-- WebAPI, WebAPI access, extension attributes?
-- How to create an entity that supports extension attributes?
-- How to implement SearchCriteria processing in the repository::getList method?
-- How to perform bulk save operations in Magento?
-- How to extend data object (Data API class) with an attribute that has values in a remote system?
-- How to extend exisitng WebAPI calls with a new parameter?
-- How to create a dynamic WebAPI ACL?
-- The difference between extension attributes and custom attributes?
+- Architectural layers of db  access classes, including models, repositories & data mappers?[](
+- Models, resource models, and collections in Magento, their impact on performance?[](
+- Repositories, SearchCriteria?[](
+- WebAPI, WebAPI access, extension attributes?[](
+- How to create an entity that supports extension attributes?[](
+- How to implement SearchCriteria processing in the repository::getList method?[](
+- How to perform bulk save operations in Magento?[](
+- How to extend data object (Data API class) with an attribute that has values in a remote system?[](
+- How to extend exisitng WebAPI calls with a new parameter?[](
+- How to create a dynamic WebAPI ACL?[](
+- The difference between extension attributes and custom attributes?[](
+
 ### 3.2 Demonstrate understanding of the staging workflow
 - Staging modification to the Magento database operations (row_id, entity managers)
-- How does data versioning work?
+- How does data versioning work? [](
 - Different possibilities of data versioning (row/table/database level) & implemented?
-- The role of the entity manager?
-- High level staging implementation overview?
+- The role of the entity manager?[](
+- High level staging implementation overview?[](
 ### 3.3 Demonstrate an ability to use different types of setup scripts in Magento
-- Schema and data setup scripts, uninstall scripts, recurring scripts, uninstall schema vs. uninstall data?
-- What happens when an uninstall script is executed: data version change, deleted tables, etc?
-- Recurring scripts and their order in the setup:upgrade process?
-- Accessing areas and system configuration values in setup scrip?
+- Schema and data setup scripts, uninstall scripts, recurring scripts, uninstall schema vs. uninstall data? [](
+- What happens when an uninstall script is executed: data version change, deleted tables, etc? [](
+- Recurring scripts and their order in the setup:upgrade process?[](
+- Accessing areas and system configuration values in setup scrip?[](
 
 ### 4.1 Describe the EAV data access process in Magento
-- Getting an attribute instance, impact of attribute sets, large number of attributes and attribute sets
-- What is the impact of 10,000 attribute sets? 1,000 attributes in a set?
-- How to get information about an attribute
-- How to perform attribute operations programmatically: assign it to a set/group, update properties, etc.
+- Getting an attribute instance, impact of attribute sets, large number of attributes and attribute sets? [](
+- What is the impact of 10,000 attribute sets? 1,000 attributes in a set?[](
+- How to get information about an attribute? [](
+- How to perform attribute operations programmatically: assign it to a set/group, update properties, etc? [](
 ### 4.2 Describe the database tables for EAV entities and how to create them
-- The EAV database structure, performance considerations, entity-level attribute properties (catalog_eav_attribute)
-- Where are catalog-specific attribute properties stored and what are they used for?
-- How does Magento store the attribute to attribute group association?
-- What backend types are available? How do you add a new backend type?
-- Specifics around static attributes
+- The EAV database structure, performance considerations, entity-level attribute properties (catalog_eav_attribute) [](
+- Where are catalog-specific attribute properties stored and what are they used for?[](
+- How does Magento store the attribute to attribute group association?[](
+- What backend types are available? How do you add a new backend type?[](
+- Specifics around static attributes? [](
 
 ### 4.3 Demonstrate an ability to operate with attribute options
-- Different ways to store attribute options. Using eav_attribute_option_* tables
-- Config base, database base options
-- The eav_attribute_option_ table: tables that contain shared options between different entities, pros and cons of
-using the table
+- Different ways to store attribute options. Using eav_attribute_option_* tables? [](
+- Config base, database base options? [](
+- The eav_attribute_option_ table: tables that contain shared options between different entities, pros and cons of using the table? [](
 ### 4.4 Demonstrate an ability to use non-catalog EAV entities
-- Adding an attribute to Customer, Customer Address and Sales entities. Making an attribute visible in the Admin or
-the storefront. Pitfalls in attributes operations in non-catalog EAV attributes
-- Adding an attribute to customers, saving and loading the attribute, problems related to the save process. What is
-the role of attribute sets and groups for customer attributes?
-- Adding an attribute to customer addresses, the role of the ""is_system"" property and why it only works for the
-Customer Address entity
-- How to make a customer or customer address attribute visible in the My Account, Checkout, and Admin pages
-- What is the purpose of the SalesSetup class and why do you use the addAttribute method for sales entities?
+- Adding an attribute to Customer, Customer Address and Sales entities?[](
+- Making an attribute visible in the Admin or the storefront? [](
+- Pitfalls in attributes operations in non-catalog EAV attributes? [](
+- Adding an attribute to customers, saving and loading the attribute, problems related to the save process? [](
+- What is the role of attribute sets and groups for customer attributes? [](
+- Adding an attribute to customer addresses, the role of the ""is_system"" property and why it only works for the Customer Address entity? [](
+- How to make a customer or customer address attribute visible in the My Account, Checkout, and Admin pages? [](
+- What is the purpose of the SalesSetup class?[](
+- Why do you use the addAttribute method for sales entities?[](
 
 ***
 
