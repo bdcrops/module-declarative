@@ -23,13 +23,13 @@
 - How do you use the native Magento save/load process in the development process? [inchoo](https://inchoo.net/magento-2/cache/how-to-save-custom-data-cache-magento-2/)
 
 ### 4.3 Describe  filter, sort collections & repositories
-- How to filter, sort & specify the selected values for collections & repositories?[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/),[mage2-blog](https://mage2-blog.com/magento-2-get-product-collection/)
-- How do you select a subset of records from the database? [mageplaza](https://www.mageplaza.com/devdocs/get-customer-collection-magento-2.html),[stackexchange](https://magento.stackexchange.com/questions/261154/search-criteria-builder-does-not-filter-an-out-of-stock-products?rq=1)
+- How to filter, sort & specify the selected values for collections & repositories?[rakeshjesadiya](https://www.rakeshjesadiya.com/get-product-collection-filter-using-service-contract/), [mage2-blog](https://mage2-blog.com/magento-2-get-product-collection/)
+- How do you select a subset of records from the database? [mageplaza](https://www.mageplaza.com/devdocs/get-customer-collection-magento-2.html), [stackexchange](https://magento.stackexchange.com/questions/261154/search-criteria-builder-does-not-filter-an-out-of-stock-products?rq=1)
 
 ### 4.4 Demonstrate an ability to use declarative schema [ declarative](https://github.com/bdcrops/module-declarative)
-- How do you add a column using declarative schema? [onilab](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/),[devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html),
-[cedcommerce](https://cedcommerce.com/blog/declarative-schema-in-magento-2-3/),[](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html),[slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema),
-[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/),[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/)
+- How do you add a column using declarative schema? [onilab](https://onilab.com/blog/declarative-schema-magento-2-3-and-higher/), [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/declarative-schema/db-schema.html),
+[cedcommerce](https://cedcommerce.com/blog/declarative-schema-in-magento-2-3/), [idslogic](https://www.idslogic.com/blog/2019/04/did-you-know-how-to-use-the-declarative-schema-in-magento-2-here-is-a-guide.html), [slideshare](https://www.slideshare.net/atishgoswami/magento-2-declarative-schema),
+[stagebit](https://stagebit.com/magento-2/declarative-schema-magento-2-3/)
 - How do you modify a table added by another module???[mod-declarative](https://github.com/bdcrops/module-declarative#how-do-you-modify-a-table-added-by-another-module), [stackexchange](https://magento.stackexchange.com/questions/266635/magento-2-3-how-to-add-custom-column-to-customer-entity-table)
 - How do you delete a column?
 
