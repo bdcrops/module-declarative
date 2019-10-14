@@ -38,7 +38,7 @@
 - How do you manipulate data using data patches? [sushilkumar](https://www.sushilkumar.ind.in/blog/magento-2/declarative-schema-feature-in-magento-2/),
 
 - What is the purpose of schema patches?
-[](https://github.com/bdcrops/module-declarative#what-is-the-purpose-of-schema-patches)
+[github](https://github.com/bdcrops/module-declarative#what-is-the-purpose-of-schema-patches)
 
 ## Magento 2 Certified Professional Developer-7% +(EAV) Model 8%= 15%
 
@@ -125,7 +125,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 - Which additional options do you have when saving EAV entities? [ibnab](https://www.ibnab.com/en/blog/magento-2/magento-2-add-custom-eav-attribute-to-category-or-customer), [rakeshjesadiya](https://www.rakeshjesadiya.com/how-to-set-firstname-and-lastname-with-minimum-character-required-in-magento-2/)
 - How do you create customizations based on changes to attribute values? [meigeeteam](https://meigeeteam.com/blog/how-to-create-custom-product-attribute-in-magento-2/), [community](https://community.magento.com/t5/Find-an-Extension-that/How-To-Create-Customer-Custom-Attribute-In-Magento-2/td-p/115719)
 - Describe the key differences between EAV and flat table collections.[ipfs]( https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/105341.html), [amasty](https://amasty.com/blog/improve-magento-2-performance-with-flat-catalog/)
-- In which situations would you use EAV for a new entity? [meetanshi](https://www.magestore.com/magento-2-tutorial/category/magento-2-tips/), (https://meetanshi.com/blog/add-eav-attribute-for-product-magento-2/)
+- In which situations would you use EAV for a new entity? [meetanshi](https://www.magestore.com/magento-2-tutorial/category/magento-2-tips/), [](https://meetanshi.com/blog/add-eav-attribute-for-product-magento-2/)
 - What are the pros and cons of EAV architecture? [magentoplanet](https://magentoplanet.wordpress.com/tag/advantages-and-disadvantages-of-eav-model/), [w3ctrl](http://www.w3ctrl.com/blog/most-important-magento-2-interview-quesion/), [amasty](https://amasty.com/blog/improve-magento-2-performance-with-flat-catalog/)
 
 ### 5.2 Demonstrate ability to use EAV entity load and save
