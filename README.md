@@ -746,8 +746,16 @@ etc/db_schema.xml
 ```
 Then run following command to generate db_schema_whitelist.json
 
-bin/magento setup:db-declaration:generate-whitelist
-Then run bin/magento setup:upgrade command.  You can modify code according to your requirement.
+```
+php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+php bin/magento setup:upgrade --dry-run=1 --keep-generated
+php bin/magento setup:upgrade
+```
+![](docs/b4addcolumn.png)
+![](docs/dryRun.png)
+![](docs/afterAddcolumn.png)
+
+ You can modify code according to your requirement.
 
 ### How do you delete a column?
 
