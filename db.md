@@ -130,7 +130,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 ### 5.2 Demonstrate ability to use EAV entity load and save
 - Describe EAV load & save process and differences from flat table load & save process. [belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html),
-[siphor](https://www.siphor.com/magento-eav-loading-and-saving/), [stackexchange](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models), [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
+[siphor](https://www.siphor.com/magento-eav-loading-and-saving/), [stackexchange](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models) 
 - What happens when an EAV entity has too many attributes? [stackoverflow](https://stackoverflow.com/questions/39195762/eav-is-bad-but-how-about-the-maintainability-of-class-table-inheritance)
 - How does the number of websites/stores affect the EAV load/save process? [progostech](https://progostech.com/how-to-increase-performance-and-handle-more-orders-on-your-magento-2-online-shop-during-the-holidays/)
 - How would you customize  load & save process for an EAV entity in  situations described here? [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
