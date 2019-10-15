@@ -738,8 +738,7 @@ etc/db_schema.xml
     <table name="customer_entity">
     <column xsi:type="int" name="referred_by" padding="10" unsigned="true" nullable="false"
     comment="Referred By"/>
-    <constraint xsi:type="foreign" referenceId= "CUSTOMER_ENTITY_REFERRED_BY_CUSTOMER_ENTITY_ENTITY_ID" table="customer_entity"
-    column="referred_by" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+     
     </table>
 
 --</schema>
@@ -940,7 +939,10 @@ To drop a constraint declared in another module, redeclare it with the disabled 
 
 ### What is the purpose of whitelisting?
 
-Purpose of whitelisting:You will not be able to run a declarative mode without creating a schema whitelist. Since backward compatibility must be maintained, declarative schema doesn’t automatically delete database tables, columns or keys not defined in db_schema.xml.This is one of the reasons we have db_schema_whitelist.json. It shows a history of all tables, columns and keys added with declarative schema and it’s required for drop operations.  
+Purpose of whitelisting:
+You will not be able to run a declarative mode without creating a schema whitelist.
+Since backward compatibility must be maintained, declarative schema doesn’t automatically delete database tables, columns or keys not defined in db_schema.xml.This is one of the reasons we have db_schema_whitelist.json. It shows a history of all tables, columns and keys added with declarative schema and it’s required for drop operations.  
+
 Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command. For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
 
 ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
