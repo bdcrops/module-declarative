@@ -129,12 +129,10 @@ adding a new attribute, a new field in the database, or a new related entity?
 - What are the pros and cons of EAV architecture? [magentoplanet](https://magentoplanet.wordpress.com/tag/advantages-and-disadvantages-of-eav-model/), [w3ctrl](http://www.w3ctrl.com/blog/most-important-magento-2-interview-quesion/), [amasty](https://amasty.com/blog/improve-magento-2-performance-with-flat-catalog/)
 
 ### 5.2 Demonstrate ability to use EAV entity load and save
-- Describe EAV load & save process and differences from flat table load & save process. [belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html),
-[siphor](https://www.siphor.com/magento-eav-loading-and-saving/), [stackexchange](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models) 
+- Describe EAV load & save process and differences from flat table load & save process. [belvg](https://belvg.com/blog/eav-load-and-save-processes-in-magento-2.html),  [stackexchange](https://magento.stackexchange.com/questions/130658/how-should-i-save-new-or-updated-entities-of-models)
 - What happens when an EAV entity has too many attributes? [stackoverflow](https://stackoverflow.com/questions/39195762/eav-is-bad-but-how-about-the-maintainability-of-class-table-inheritance)
 - How does the number of websites/stores affect the EAV load/save process? [progostech](https://progostech.com/how-to-increase-performance-and-handle-more-orders-on-your-magento-2-online-shop-during-the-holidays/)
-- How would you customize  load & save process for an EAV entity in  situations described here? [github](https://github.com/magento-notes/magento2-exam-notes/blob/master/5. Using the Entity-Attribute-Value -EAV- Model/2. Demonstrate ability to use EAV entity load and save.md)
-
+- How would you customize  load & save process for an EAV entity in  situations described here?  
 
 ### 5.3 Demonstrate ability to manage attributes
 - Describe EAV attributes, including the frontend/source/backend structure. [belvg](  https://belvg.com/blog/how-to-manage-eav-attributes-including-interface-source-backend-structure-in-magento-2.html)
@@ -161,7 +159,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 - Architectural layers of db  access classes, including models, repositories & data mappers?[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html), [crosp](https://crosp.net/blog/software-architecture/clean-architecture-part-1-databse-vs-domain/
 ), [devdocs](https://devdocs.magento.com/guides/v2.3/architecture/archi_perspectives/persist_layer.html)
 - Models, resource models, and collections in Magento, their impact on performance? [magenteiro](https://www.magenteiro.com/blog/magento-2/models-resource_models-collections/), [stackexchange](https://magento.stackexchange.com/questions/268974/magento-2-difference-between-model-resourcemodel-collection-and-repository), [hellomagento2](https://www.hellomagento2.com/pratices-tests-collections/
-- Repositories, SearchCriteria?[fishchenko] (https://fishchenko.com/blog/magento-2-join-table-in-orderrepositorygetlist-extension-attributes/), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why), [offset101](https://www.offset101.com/magento-2-x-manage-multiple-conditions-filter-filtergroups/), [ibnab](https://www.ibnab.com/en/blog/magento-2), [willfeeling](https://blog.willfeeling.com/2019/06/24/magento2-dump-questions-package-1/), [ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/200941.html)
+- Repositories, SearchCriteria? [fishchenko](https://fishchenko.com/blog/magento-2-join-table-in-orderrepositorygetlist-extension-attributes/), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why), [offset101](https://www.offset101.com/magento-2-x-manage-multiple-conditions-filter-filtergroups/), [ibnab](https://www.ibnab.com/en/blog/magento-2), [willfeeling](https://blog.willfeeling.com/2019/06/24/magento2-dump-questions-package-1/), [ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/200941.html)
 
 - WebAPI, WebAPI access, extension attributes? [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/webapi/request-processor-pool.html), [mageseller](https://www.mageseller.com/blog/extension-attributes-in-magento-2.html), [stackexchange](https://magento.stackexchange.com/questions/tagged/extension-attributes?sort=votes), [bizspice](https://www.bizspice.com/blog/post/magento-2-web-api-calls-explained), [belvg](https://belvg.com/blog/how-to-use-magento-2-api-documentation-examples-tutorial.html), [dckap](https://www.dckap.com/blog/extension-attributes-in-magento2/)
 
@@ -195,32 +193,38 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 
 ### 4.1 Describe the EAV data access process in Magento
-- Getting an attribute instance, impact of attribute sets, large number of attributes and attribute sets? [](
+- Getting an attribute instance, impact of attribute sets, large number of attributes and attribute sets? [webkul](https://webkul.com/blog/get-options-custom-attribute-magento-2/), [atwix](https://www.atwix.com/magento-2/how-to-access-custom-catalog-attributes/)
 - What is the impact of 10,000 attribute sets? 1,000 attributes in a set?[](
-- How to get information about an attribute? [](
-- How to perform attribute operations programmatically: assign it to a set/group, update properties, etc? [](
+- How to get information about an attribute? [stackexchange](https://magento.stackexchange.com/questions/250322/how-to-get-current-products-custom-attribute-value-in-blockphtml-to-display-in),
+[firebearstudio](https://firebearstudio.com/blog/get-attributes-of-product-magento-2.html)
+- How to perform attribute operations programmatically: assign it to a set/group, update properties, etc? [stackexchange](https://magento.stackexchange.com/questions/122829/modify-product-attribute-programmatically-in-magento2-2-1-0),
+[magecomp](https://magecomp.com/blog/how-create-attribute-set-programmatically-assign-attributes-to-it-in-magento-2/),
+[magestore](https://www.magestore.com/magento-2-tutorial/create-customer-add-address-programmatically/), [ibnab](https://www.ibnab.com/en/blog/magento-2/magento-2-add-custom-eav-attribute-to-category-or-customer)
 
 ### 4.2 Describe the database tables for EAV entities and how to create them
-- The EAV database structure, performance considerations, entity-level attribute properties (catalog_eav_attribute) [](
-- Where are catalog-specific attribute properties stored and what are they used for?[](
-- How does Magento store the attribute to attribute group association?[](
-- What backend types are available? How do you add a new backend type?[](
-- Specifics around static attributes? [](
+- The EAV database structure, performance considerations, entity-level attribute properties (catalog_eav_attribute) [belvg](https://belvg.com/blog/eav-in-magento-2.html), [fishpig](https://fishpig.co.uk/magento/tutorials/eav-database-structure/)
+- Where are catalog-specific attribute properties stored and what are they used for? [fastcomet](https://www.fastcomet.com/tutorials/magento2/product-attributes)
+- How does Magento store the attribute to attribute group association?[magestore](https://www.magestore.com/magento-2-tutorial/products-dashboard-magento-2/),  [docs](https://docs.magento.com/m2/ce/user_guide/stores/attribute-sets.html)
+- What backend types are available? How do you add a new backend type?[belvg](https://belvg.com/blog/how-to-manage-eav-attributes-including-interface-source-backend-structure-in-magento-2.html), [meigeeteam](https://meigeeteam.com/blog/where-to-find-all-attribute-properties-in-magento-2/),
+[bsscommerce](https://bsscommerce.com/confluence/magento-2-eav-model-things-you-may-not-know/)
+- Specifics around static attributes? [stackexchange](https://magento.stackexchange.com/questions/270812/how-can-i-create-a-new-static-product-attribute-in-magento-2)
 
 ### 4.3 Demonstrate an ability to operate with attribute options
-- Different ways to store attribute options. Using eav_attribute_option_* tables? [](
-- Config base, database base options? [](
-- The eav_attribute_option_ table: tables that contain shared options between different entities, pros and cons of using the table? [](
+- Different ways to store attribute options. Using eav_attribute_option_* tables? [](https://sherocommerce.com/categories-attributes-magento-2/)
+- Config base, database base options? [mage2](https://mage2.agency/blog/2018/04/19/change-attribute-scope-programmatically-in-magento-2.html)
+- The eav_attribute_option_ table: tables that contain shared options between different entities, pros and cons of using the table? [stackexchange](https://magento.stackexchange.com/questions/269390/magento2-add-custom-column-in-eav-attribute-eav-attribute-option-table),
+[webetutorial](https://www.webetutorial.com/question/cannot-save-attribute-the-value-of-admin-must-be-unique/)
 ### 4.4 Demonstrate an ability to use non-catalog EAV entities
-- Adding an attribute to Customer, Customer Address and Sales entities?[](
-- Making an attribute visible in the Admin or the storefront? [](
-- Pitfalls in attributes operations in non-catalog EAV attributes? [](
-- Adding an attribute to customers, saving and loading the attribute, problems related to the save process? [](
-- What is the role of attribute sets and groups for customer attributes? [](
-- Adding an attribute to customer addresses, the role of the ""is_system"" property and why it only works for the Customer Address entity? [](
-- How to make a customer or customer address attribute visible in the My Account, Checkout, and Admin pages? [](
-- What is the purpose of the SalesSetup class?[](
-- Why do you use the addAttribute method for sales entities?[](
+- Adding an attribute to Customer, Customer Address and Sales entities? [web4pro](https://web4pro.net/blog-news/magento-2-add-custom-attribute-customers-address/), [mageplaza](https://www.mageplaza.com/magento-2-module-development/magento-2-add-customer-attribute-programmatically.html) [docs](https://docs.magento.com/m2/ee/user_guide/stores/attributes-customer-address.html) [magestore](https://blog.magestore.com/magento-custom-entity-address/)
+- Making an attribute visible in the Admin or the storefront? [stackexchange](https://magento.stackexchange.com/questions/116208/new-attribute-created-in-admin-side-is-not-showing-in-storefront-ui-in-magento-2), [stackoverflow](https://stackoverflow.com/questions/37323674/new-attribute-created-in-admin-side-is-not-showing-in-storefront-ui-in-magento-2), [mageplaza](https://www.mageplaza.com/kb/how-create-product-attribute-in-magento-2.html), [develodesign](https://www.develodesign.co.uk/news/magento-development-blog/magento-2-displaying-custom-product-attributes-storefront/)
+- Pitfalls in attributes operations in non-catalog EAV attributes? [emiprotechnologies](https://www.emiprotechnologies.com/blog/magento-blog-56/post/pitfalls-to-avoid-during-magento-development-286)
+- Adding an attribute to customers, saving and loading the attribute, problems related to the save process? [dckap](https://www.dckap.com/blog/fix-customer-custom-address-attribute-save-issue-in-magento-2-e-e/), [magecomp](https://magecomp.com/blog/fix-issue-saving-custom-customer-attribute-value-programmatically-magento-2/), [stackoverflow](https://stackoverflow.com/questions/51398552/customer-custom-attribute-using-eav-is-not-displaying-values-in-grid?rq=1)
+- What is the role of attribute sets and groups for customer attributes? [bsscommerce](https://bsscommerce.com/blog/how-to-create-attribute-sets-in-magento-2/) [mag-manager](https://www.mag-manager.com/product-information/magento-product-management/manage-magento-2-attribute-sets-in-advanced-way/)
+- Adding an attribute to customer addresses, the role of the ""is_system"" property and why it only works for the Customer Address entity? [mage2](https://mage2.pro/t/topic/656)
+- How to make a customer or customer address attribute visible in the My Account, Checkout, and Admin pages? [docs](https://docs.magento.com/m2/ee/user_guide/stores/attributes-customer.html), [belvg](https://belvg.com/blog/how-to-add-custom-attribute-to-customer-grid-in-magento-2.html), [webkul](https://webkul.com/blog/how-to-create-custom-customer-address-attribute-in-magento-2/)
+- What is the purpose of the SalesSetup class?[magentoextensions](https://www.magentoextensions.org/documentation/class_magento_1_1_sales_1_1_setup_1_1_sales_setup.html),
+[hotexamples](https://hotexamples.com/examples/magento.sales.setup/SalesSetupFactory/-/php-salessetupfactory-class-examples.html), [webkul](https://webkul.com/blog/create-order-quote_address-attribute-installer-magento-2/)
+- Why do you use the addAttribute method for sales entities? [yereone](https://www.yereone.com/blog/magento-2-how-to-add-new-order-attribute/), [amasty](https://amasty.com/docs/doku.php?id=magento_2:order_attributes), [siphor](https://www.siphor.com/adding-custom-attributes-to-magento-2-quotes-and-orders/)
 
 ***
 
