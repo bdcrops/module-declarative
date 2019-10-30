@@ -738,7 +738,7 @@ etc/db_schema.xml
     <table name="customer_entity">
     <column xsi:type="int" name="referred_by" padding="10" unsigned="true" nullable="false"
     comment="Referred By"/>
-     
+
     </table>
 
 --</schema>
@@ -980,7 +980,66 @@ Optionally, if you plan to enable rollback for your patch during module uninstal
 
 Old scripts will work with new versions of Magento. However, if you want to convert your old scripts to the new format, implement \Magento\Framework\Setup\Patch\PatchVersionInterface. This interface allows you to specify the setup version of the module in your database. If the version of the module is higher than or equal to the version specified in your patch, then the patch is skipped. If the version in the database is lower, then the patch installs
 
+### How to EAV attributes Create via Declarative Schema ?
 
+
+In Magento 2.3 and above, you can create attribute via DataPatch.  For example, create a file: Vendor_Module\Setup\Patch\Data\ApplyNewAttribute.php
+
+```
+<?php
+namespace Vendor\Module\Setup\Patch\Data;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+use Magento\Framework\Setup\Patch\DataPatchInterface;
+use Magento\Framework\Setup\Patch\PatchVersionInterface;
+use Magento\Eav\Setup\EavSetup;
+use Magento\Eav\Setup\EavSetupFactory;
+/**
+ * Class ApplyNewAttribute
+ * @package Vendor\Module\Setup\Patch\Data
+ */
+class ApplyNewAttribute implements DataPatchInterface, PatchVersionInterface
+{
+    /**
+     * @var ModuleDataSetupInterface
+     */
+    private $moduleDataSetup;
+    /**
+     * @var EavSetupFactory
+     */
+    private $eavSetupFactory;
+    /**
+     * ApplyNewAttribute constructor.
+     *
+     * @param ModuleDataSetupInterface $moduleDataSetup
+     * @param EavSetupFactory $eavSetupFactory
+     */
+    public function __construct(
+        ModuleDataSetupInterface $moduleDataSetup,
+        EavSetupFactory $eavSetupFactory
+    ) {
+        $this->moduleDataSetup = $moduleDataSetup;
+        $this->eavSetupFactory = $eavSetupFactory;
+    }
+    /**
+     * {@inheritdoc}
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     */
+    public function apply()
+    {
+        /** @var EavSetup $eavSetup */
+        $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            /**
+Add your attribute here.
+*/
+……….
+       );
+        $setup->endSetup();
+    }
+}
+```
+[bsscommerce](https://bsscommerce.com/confluence/magento-2-eav-model-things-you-may-not-know/)
 
 ## Ref
 
