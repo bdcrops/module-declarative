@@ -158,7 +158,7 @@ adding a new attribute, a new field in the database, or a new related entity?
 ### 3.1 Demonstrate Db Access Classes(models,repositories & data mappers)
 - Architectural layers of db  access classes, including models, repositories & data mappers?[belvg](https://belvg.com/blog/database-in-magento-2-models-resource-models-and-collections.html), [crosp](https://crosp.net/blog/software-architecture/clean-architecture-part-1-databse-vs-domain/
 ), [devdocs](https://devdocs.magento.com/guides/v2.3/architecture/archi_perspectives/persist_layer.html)
-- Models, resource models, and collections in Magento, their impact on performance? [magenteiro](https://www.magenteiro.com/blog/magento-2/models-resource_models-collections/), [stackexchange](https://magento.stackexchange.com/questions/268974/magento-2-difference-between-model-resourcemodel-collection-and-repository), [hellomagento2](https://www.hellomagento2.com/pratices-tests-collections/
+- Models, resource models, and collections in Magento, their impact on performance? [magenteiro](https://www.magenteiro.com/blog/magento-2/models-resource_models-collections/), [stackexchange](https://magento.stackexchange.com/questions/268974/magento-2-difference-between-model-resourcemodel-collection-and-repository), [hellomagento2](https://www.hellomagento2.com/pratices-tests-collections/)
 - Repositories, SearchCriteria? [fishchenko](https://fishchenko.com/blog/magento-2-join-table-in-orderrepositorygetlist-extension-attributes/), [stackexchange](https://magento.stackexchange.com/questions/274411/magento-2-how-to-use-repositoryinterface-getlist-and-why), [offset101](https://www.offset101.com/magento-2-x-manage-multiple-conditions-filter-filtergroups/), [ibnab](https://www.ibnab.com/en/blog/magento-2), [willfeeling](https://blog.willfeeling.com/2019/06/24/magento2-dump-questions-package-1/), [ipfs](https://ipfs-sec.stackexchange.cloudflare-ipfs.com/magento/A/question/200941.html)
 
 - WebAPI, WebAPI access, extension attributes? [devdocs](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/webapi/request-processor-pool.html), [mageseller](https://www.mageseller.com/blog/extension-attributes-in-magento-2.html), [stackexchange](https://magento.stackexchange.com/questions/tagged/extension-attributes?sort=votes), [bizspice](https://www.bizspice.com/blog/post/magento-2-web-api-calls-explained), [belvg](https://belvg.com/blog/how-to-use-magento-2-api-documentation-examples-tutorial.html), [dckap](https://www.dckap.com/blog/extension-attributes-in-magento2/)
@@ -233,4 +233,4 @@ adding a new attribute, a new field in the database, or a new related entity?
 
 ****
 
- 
+- [ibnabEavWorkshop](https://www.ibnab.com/en/blog/magento-2/magento-2-add-custom-eav-attribute-to-category-or-customer)
