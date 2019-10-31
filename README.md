@@ -20,7 +20,7 @@ This change is incredibly useful once you start playing with it. The php schema 
 
  - Schema whitelist (etc/db_schema_whitelist.json)
 
- - Insert data (Installing and upgrading data)
+ - DataPatch / Insert data (Installing and upgrading data)
 
  - How to install & upgrade BDC_Declarative
 
