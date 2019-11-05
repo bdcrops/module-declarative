@@ -45,15 +45,15 @@ This change is incredibly useful once you start playing with it. The php schema 
  - Create [app/code/BDC/Declarative/registration.php](registration.php)
 
    <details><summary>Source</summary>
-   ```
-   <?php
-   \Magento\Framework\Component\ComponentRegistrar::register(
-       \Magento\Framework\Component\ComponentRegistrar::MODULE,
-       'BDC_Declarative',
-       __DIR__
-   );
 
-   ```
+     ```
+     <?php
+     \Magento\Framework\Component\ComponentRegistrar::register(
+         \Magento\Framework\Component\ComponentRegistrar::MODULE,
+         'BDC_Declarative',
+         __DIR__
+     );
+     ```
   </details>
 
  - Create app/code/BDC/Declarative/etc/module.xml
