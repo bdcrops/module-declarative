@@ -242,11 +242,11 @@ This change is incredibly useful once you start playing with it. The php schema 
 Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
 For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
 
-  <details><summary>Show images</summary>
+    <details><summary>Show images</summary>
 
-    ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+      ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
 
-  </details>
+    </details>
 
 
 ```
@@ -269,7 +269,7 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 Run php bin/magento setup:upgrade
 ```
 
-    <details><summary>Show images</summary>
+    <details><summary>Show Image</summary>
 
       ![InsertData](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
