@@ -244,7 +244,7 @@ For that, you need a //etc/db_schema_whitelist.json file that will store all the
 
     <details><summary>Show images</summary>
 
-      ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+        ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
 
     </details>
 
@@ -261,15 +261,16 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
     <details><summary>Show Image</summary>
 
-      ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+        ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
     </details>
 
 ```
 Run php bin/magento setup:upgrade
 ```
+
       <details><summary>Show Image</summary>
-      
-        ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+
+          ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
       </details>
 
