@@ -72,6 +72,7 @@ This change is incredibly useful once you start playing with it. The php schema 
  - Create [etc/db_schema.xml](etc/db_schema.xml)
 
     <details><summary>Source</summary>
+
         ```
         <?xml version="1.0"?>
         <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
