@@ -256,13 +256,13 @@ php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declar
 php bin/magento setup:upgrade --dry-run=1 --keep-generated
 ```
 
-Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
- Insert data NonRevertable.php & Revertable.php
+  Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
+  Insert data NonRevertable.php & Revertable.php
 
-    <details><summary>Show Image</summary>
+  <details><summary>Show Image</summary>
 
-        ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
-    </details>
+    ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+  </details>
 
   ```
   Run php bin/magento setup:upgrade
@@ -270,7 +270,7 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
   <details><summary>Show Image</summary>
 
-      ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+    ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
   </details>
 
