@@ -249,31 +249,31 @@ For that, you need a //etc/db_schema_whitelist.json file that will store all the
     </details>
 
 
-```
-php bin/magento setup:db-declaration:generate-whitelist [options]
-php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
-php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
-php bin/magento setup:upgrade --dry-run=1 --keep-generated
-```
+    ```
+    php bin/magento setup:db-declaration:generate-whitelist [options]
+    php bin/magento setup:db-declaration:generate-whitelist --module-name=vendor_module
+    php bin/magento setup:db-declaration:generate-whitelist --module-name=BDC_Declarative
+    php bin/magento setup:upgrade --dry-run=1 --keep-generated
+    ```
 
-Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
- Insert data NonRevertable.php & Revertable.php
+    Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
+     Insert data NonRevertable.php & Revertable.php
 
-    <details><summary>Show images</summary>
+        <details><summary>Show images</summary>
 
-      ![Insertdata](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+          ![Insertdata](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
 
-    </details>
+        </details>
 
-```
-Run php bin/magento setup:upgrade
-```
+    ```
+    Run php bin/magento setup:upgrade
+    ```
 
-    <details><summary>Show Image</summary>
+        <details><summary>Show Image</summary>
 
-      ![InsertData](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+          ![InsertData](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
-    </details>
+        </details>
 
 ***
 
