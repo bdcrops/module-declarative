@@ -57,15 +57,19 @@ This change is incredibly useful once you start playing with it. The php schema 
   </details>
 
  - Create app/code/BDC/Declarative/etc/module.xml
- ```
- <?xml version="1.0"?>
- <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-     <module name="BDC_Declarative" setup_version="1.0.0"/>
+  <details><summary>Source</summary>
 
- </config>
+     ```
+     <?xml version="1.0"?>
+     <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+         <module name="BDC_Declarative" setup_version="1.0.0"/>
+     </config>
+     ```
+    </details>
 
- ```
+
  - Create app/code/BDC/Declarative/etc/db_schema.xml
+ 
  ```
  <?xml version="1.0"?>
  <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
