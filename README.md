@@ -57,6 +57,7 @@ This change is incredibly useful once you start playing with it. The php schema 
   </details>
 
  - Create app/code/BDC/Declarative/etc/module.xml
+ 
   <details><summary>Source</summary>
 
      ```
@@ -69,7 +70,7 @@ This change is incredibly useful once you start playing with it. The php schema 
 
 
  - Create app/code/BDC/Declarative/etc/db_schema.xml
- 
+
  ```
  <?xml version="1.0"?>
  <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
