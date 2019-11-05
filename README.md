@@ -69,12 +69,13 @@ This change is incredibly useful once you start playing with it. The php schema 
     </details>
 
 
- - Create app/code/BDC/Declarative/etc/db_schema.xml
+ - Create [etc/db_schema.xml](etc/db_schema.xml)
 
- ```
- <?xml version="1.0"?>
- <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-    <table name="bdc_declarative" resource="default" engine="innodb" comment="bdcrops declarative table">
+    <details><summary>Source</summary>
+        ```
+        <?xml version="1.0"?>
+        <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        <table name="bdc_declarative" resource="default" engine="innodb" comment="bdcrops declarative table">
          <column xsi:type="smallint" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="ID"/>
          <column xsi:type="varchar" name="name" nullable="false" length="25" comment="Name"/>
          <column xsi:type="varchar" name="email" nullable="false" length="25" comment="Email"/>
@@ -82,10 +83,11 @@ This change is incredibly useful once you start playing with it. The php schema 
          <column xsi:type="timestamp" name="created"  comment="Time of event"/>
          <column xsi:type="timestamp" name="date_closed"  comment="Time of event"/>
          <constraint xsi:type="primary" referenceId="PRIMARY">   <column name="id"/> </constraint>
-     </table>
- </schema>
+        </table>
+        </schema>
 
- ```
+        ```
+    </details>
   file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
 
  ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
