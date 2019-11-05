@@ -56,7 +56,7 @@ This change is incredibly useful once you start playing with it. The php schema 
      ```
   </details>
 
- - Create app/code/BDC/Declarative/etc/module.xml
+ - Create [etc/module.xml](etc/module.xml)
 
     <details><summary>Source</summary>
 
