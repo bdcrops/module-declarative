@@ -261,7 +261,7 @@ php bin/magento setup:upgrade --dry-run=1 --keep-generated
 
   <details><summary>Show Image</summary>
 
-    ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+    ![Insertdata](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
   </details>
 
   ```
@@ -270,7 +270,7 @@ php bin/magento setup:upgrade --dry-run=1 --keep-generated
 
   <details><summary>Show Image</summary>
 
-    ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+    ![Insertdata](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
   </details>
 
