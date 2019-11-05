@@ -91,7 +91,10 @@ This change is incredibly useful once you start playing with it. The php schema 
     </details>
   file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
 
- ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+    <details><Show Image</summary>
+
+        ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+    </details>
 
  - Create [Setup/Schema/Sample.php](Setup/Schema/Sample.php)
 
@@ -185,7 +188,7 @@ This change is incredibly useful once you start playing with it. The php schema 
           ```
       </details>
 
- - Create app/code/BDC/Declarative/Setup/Patch/Data/Revertable.php
+ - Create [Setup/Patch/Data/Revertable.php](Setup/Patch/Data/Revertable.php)
 
     <details><summary>Source</summary>
 
@@ -239,7 +242,12 @@ This change is incredibly useful once you start playing with it. The php schema 
 Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
 For that, you need a //etc/db_schema_whitelist.json file that will store all the content added with declarative schema. To generate this file, run:
 
-![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+    <details><summary>Show images</summary>
+
+      ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/whitelist.png)
+
+    </details>
+
 
 ```
 php bin/magento setup:db-declaration:generate-whitelist [options]
@@ -251,11 +259,19 @@ php bin/magento setup:upgrade --dry-run=1 --keep-generated
 Now, there are db_whitelist_schema.json file will be create in /vendor/module/etc folder.
  Insert data NonRevertable.php & Revertable.php
 
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+    <details><summary>Show Image</summary>
+
+      ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+    </details>
+
 ```
 Run php bin/magento setup:upgrade
 ```
-![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+      <details><summary>Show Image</summary>
+      
+        ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+
+      </details>
 
 ***
 
