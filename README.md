@@ -28,66 +28,33 @@ This change is incredibly useful once you start playing with it. The php schema 
 
  - Certified Associate/Professional Developer Questions & Solution
 
-
-
 ## 1. How to install & upgrade  Declarative Schema Module
-
 ### 1.1. Copy and paste
-If you don't want to install via composer, you can use this way.
-
-- Download [the latest version here](https://github.com/bdcrops/module-declarative/archive/master.zip)
-- Extract `master.zip` file to `app/code/BDC/Declarative` ; You should create a folder path `app/code/BDC/Declarative` if not exist.
-- Go to Magento root folder and run upgrade command line to install `BDC_Declarative`:
-
-```
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy
-```
+  If you don't want to install via composer, you can use this way.
+  - Download [the latest version here](https://github.com/bdcrops/module-declarative/archive/master.zip)
 
 ### 1.2. Install via composer
+  ```
+  composer require bdc/module-declarative
+  ```
 
-We recommend you to install BDC_Declarative module via composer. It is easy to install, update and maintaince.Run the following command in Magento 2 root folder.
-
-https://packagist.org/packages/bdc/module-declarative
-
-```
-composer require bdc/module-declarative
-```
-
-### 1.3  Install & Upgrade
-```
-composer config repositories.module-declarative git
-https://github.com/bdcrops/module-declarative.git
-
-composer require bdcrops/module-declarative:~1.0.0
-```
-Upgrade    
-
-```
-composer update bdcrops/module-declarative
-
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy
-```
-Run compile if your store in Product mode:
-```
-php bin/magento setup:di:compile
-
-```
 ****
 
 ## 2. Declarative Schema Module Step By Step
 
- - Create app/code/BDC/Declarative/registration.php
- ```
- <?php
- \Magento\Framework\Component\ComponentRegistrar::register(
-     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-     'BDC_Declarative',
-     __DIR__
- );
+ - Create [app/code/BDC/Declarative/registration.php](registration.php)
 
- ```
+   <details><summary>Source</summary>
+   ```
+   <?php
+   \Magento\Framework\Component\ComponentRegistrar::register(
+       \Magento\Framework\Component\ComponentRegistrar::MODULE,
+       'BDC_Declarative',
+       __DIR__
+   );
+
+   ```
+  </details>
 
  - Create app/code/BDC/Declarative/etc/module.xml
  ```
