@@ -261,14 +261,16 @@ Now, there are db_whitelist_schema.json file will be create in /vendor/module/et
 
     <details><summary>Show Image</summary>
 
-      ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+      ![Insertdata](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/data.png)
+
     </details>
 
 ```
 Run php bin/magento setup:upgrade
 ```
     <details><summary>Show Image</summary>
-    ![Insert data](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
+
+      ![InsertData](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db-table.png)
 
     </details>
 
