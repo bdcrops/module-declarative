@@ -93,133 +93,147 @@ This change is incredibly useful once you start playing with it. The php schema 
 
  ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
 
- - Create app/code/BDC/Declarative/Setup/Schema/Sample.php
- ```
- <?php
- declare(strict_types=1);
+ - Create [Setup/Schema/Sample.php](Setup/Schema/Sample.php)
 
- namespace BDC\Declarative\Setup\Patch\Schema;
+      <details><summary>Source</summary>
 
- use Magento\Framework\Setup\Patch\SchemaPatchInterface;
- use Magento\Framework\Setup\ModuleDataSetupInterface;
- /**
- * Patch is mechanism, that allows to do atomic upgrade data changes
- */
- class Sample implements SchemaPatchInterface{
-     /**
-      * @var ModuleDataSetupInterface $moduleDataSetup
-      */
-     private $moduleDataSetup;
-     /**
-      * @param ModuleDataSetupInterface $moduleDataSetup
-      */
-     public function __construct(ModuleDataSetupInterface $moduleDataSetup) {
-         $this->moduleDataSetup = $moduleDataSetup;
-     }
-     /**
-      * Do Upgrade
-      *
-      * @return void
-      */
-     public function apply() { }
-     /**
-      * {@inheritdoc}
-      */
-     public function getAliases() { return []; }
-     /**
-      * {@inheritdoc}
-      */
-     public static function getDependencies() { return [ ]; }
- }
+        ```
+        <?php
+        declare(strict_types=1);
 
- ```
+        namespace BDC\Declarative\Setup\Patch\Schema;
 
- - Create app/code/BDC/Declarative/Setup/Patch/Data/NonRevertable.php
- ```
- <?php
- declare(strict_types=1);
- namespace BDC\Declarative\Setup\Patch\Data;
+        use Magento\Framework\Setup\Patch\SchemaPatchInterface;
+        use Magento\Framework\Setup\ModuleDataSetupInterface;
+        /**
+        * Patch is mechanism, that allows to do atomic upgrade data changes
+        */
+        class Sample implements SchemaPatchInterface{
+         /**
+          * @var ModuleDataSetupInterface $moduleDataSetup
+          */
+         private $moduleDataSetup;
+         /**
+          * @param ModuleDataSetupInterface $moduleDataSetup
+          */
+         public function __construct(ModuleDataSetupInterface $moduleDataSetup) {
+             $this->moduleDataSetup = $moduleDataSetup;
+         }
+         /**
+          * Do Upgrade
+          *
+          * @return void
+          */
+         public function apply() { }
+         /**
+          * {@inheritdoc}
+          */
+         public function getAliases() { return []; }
+         /**
+          * {@inheritdoc}
+          */
+         public static function getDependencies() { return [ ]; }
+        }
 
- use Magento\Framework\Setup\Patch\DataPatchInterface;
- use Magento\Framework\Setup\ModuleDataSetupInterface;
- /**
-  * Class NonRevertable
-  * @package BDC\Declarative\Setup\Patch\Data
-  */
- class NonRevertable implements DataPatchInterface{
-     /**
-      * @var ModuleDataSetupInterface $moduleDataSetup
-      */
-     private $moduleDataSetup;
-     /**
-      * @param ModuleDataSetupInterface $moduleDataSetup
-      */
-     public function __construct(ModuleDataSetupInterface $moduleDataSetup){
-         $this->moduleDataSetup = $moduleDataSetup;
-     }
-     /**
-      * Do Upgrade
-      * @return void
-      */
-     public function apply(){
-         $data = ['name' => 'Matin Rahman', 'email' => 'matinict@gmail.com','note' => 'Declarative insert'];
-         $this->moduleDataSetup->getConnection()->insert('bdc_declarative', $data);
-     }
-     /**
-      * {@inheritdoc}
-      */
-     public function getAliases(){ return []; }
-     /**
-      * {@inheritdoc}
-      */
-     public static function getDependencies(){ return []; }
- }
+        ```
+      </details>
 
- ```
+ - Create [Setup/Patch/Data/NonRevertable.php](Setup/Patch/Data/NonRevertable.php)
+
+      <details><summary>Source</summary>
+
+          ```
+          <?php
+          declare(strict_types=1);
+          namespace BDC\Declarative\Setup\Patch\Data;
+
+          use Magento\Framework\Setup\Patch\DataPatchInterface;
+          use Magento\Framework\Setup\ModuleDataSetupInterface;
+          /**
+          * Class NonRevertable
+          * @package BDC\Declarative\Setup\Patch\Data
+          */
+          class NonRevertable implements DataPatchInterface{
+          /**
+          * @var ModuleDataSetupInterface $moduleDataSetup
+          */
+          private $moduleDataSetup;
+          /**
+          * @param ModuleDataSetupInterface $moduleDataSetup
+          */
+          public function __construct(ModuleDataSetupInterface $moduleDataSetup){
+             $this->moduleDataSetup = $moduleDataSetup;
+          }
+          /**
+          * Do Upgrade
+          * @return void
+          */
+          public function apply(){
+             $data = ['name' => 'Matin Rahman', 'email' => 'matinict@gmail.com','note' => 'Declarative insert'];
+             $this->moduleDataSetup->getConnection()->insert('bdc_declarative', $data);
+          }
+          /**
+          * {@inheritdoc}
+          */
+          public function getAliases(){ return []; }
+          /**
+          * {@inheritdoc}
+          */
+          public static function getDependencies(){ return []; }
+          }
+
+          ```
+      </details>
+
  - Create app/code/BDC/Declarative/Setup/Patch/Data/Revertable.php
- ```
- <?php
- declare(strict_types=1);
 
- namespace BDC\Declarative\Setup\Patch\Data;
+    <details><summary>Source</summary>
 
- use Magento\Framework\Setup\Patch\DataPatchInterface;
- use Magento\Framework\Setup\ModuleDataSetupInterface;
- /**
-  * Class Revertable
-  * @package BDC\Declarative\Setup\Patch\Data
-  */
- class Revertable implements DataPatchInterface {
-     /**
-      * @var ModuleDataSetupInterface $moduleDataSetup
-      */
-     private $moduleDataSetup;
+         ```
+         <?php
+         declare(strict_types=1);
 
-     /**
-      * @param ModuleDataSetupInterface $moduleDataSetup
-      */
-     public function __construct(ModuleDataSetupInterface $moduleDataSetup){
-         $this->moduleDataSetup = $moduleDataSetup;
-     }
+         namespace BDC\Declarative\Setup\Patch\Data;
 
-     /**
-      * Do Upgrade
-      *
-      * @return void
-      */
-     public function apply() { }
+         use Magento\Framework\Setup\Patch\DataPatchInterface;
+         use Magento\Framework\Setup\ModuleDataSetupInterface;
+         /**
+          * Class Revertable
+          * @package BDC\Declarative\Setup\Patch\Data
+          */
+         class Revertable implements DataPatchInterface {
+             /**
+              * @var ModuleDataSetupInterface $moduleDataSetup
+              */
+             private $moduleDataSetup;
 
-     /**
-      * {@inheritdoc}
-      */
-     public function getAliases() { return []; }
-     /**
-      * {@inheritdoc}
-      */
-     public static function getDependencies() { return [ ]; }
- }
+             /**
+              * @param ModuleDataSetupInterface $moduleDataSetup
+              */
+             public function __construct(ModuleDataSetupInterface $moduleDataSetup){
+                 $this->moduleDataSetup = $moduleDataSetup;
+             }
 
- ```
+             /**
+              * Do Upgrade
+              *
+              * @return void
+              */
+             public function apply() { }
+
+             /**
+              * {@inheritdoc}
+              */
+             public function getAliases() { return []; }
+             /**
+              * {@inheritdoc}
+              */
+             public static function getDependencies() { return [ ]; }
+         }
+
+         ```
+    </details>
+
 -  Run
  A schema whitelist:You will not be able to run a declarative mode without creating a schema whitelist.
 Note: it is recommended to generate a new whitelist for every release for the double-check purposes. Before running the upgrade command you need to add your schema to db_whitelist_schema.json file by running the following command.
