@@ -86,7 +86,6 @@ This change is incredibly useful once you start playing with it. The php schema 
          <constraint xsi:type="primary" referenceId="PRIMARY">   <column name="id"/> </constraint>
         </table>
         </schema>
-
         ```
     </details>
 
