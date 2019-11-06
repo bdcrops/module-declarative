@@ -495,6 +495,16 @@ Revertable Patches
 ![](docs/magento-23-schema-and-data-patches-40-638.jpg)
 ![](docs/magento-23-schema-and-data-patches-41-638.jpg)
 
+```
+php bin/magento help setup:db-declaration:generate-patch
+php bin/magento setup:db-declaration:generate-patch Bdcrops_TicketingSystem Example --type=data
+php bin/magento setup:db-declaration:generate-patch Bdcrops_TicketingSystem Example --type=schema
+
+```
+![](docs/generatePatch.png)
+![](docs/generateDataPatch.png)
+![](docs/generateSchemaPatch.png)
+
 
 ### How to Drop a table?
 
