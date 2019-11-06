@@ -1047,10 +1047,7 @@ class ApplyNewAttribute implements DataPatchInterface, PatchVersionInterface
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Product::ENTITY,
-            /**
-Add your attribute here.
-*/
-……….
+            /** Add your attribute here.……….*/
        );
         $setup->endSetup();
     }
