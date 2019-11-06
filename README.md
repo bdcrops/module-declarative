@@ -89,11 +89,12 @@ This change is incredibly useful once you start playing with it. The php schema 
 
         ```
     </details>
-  file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
+    
+    file “db_schema.xml” inside folder “BDC/Declarative/etc” and write the following code
 
     <details><Show Image</summary>
 
-        ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
+      ![db_schema](https://github.com/bdcrops/BDC_Declarative/blob/master/view/adminhtml/web/images/db_schema.png)
     </details>
 
  - Create [Setup/Schema/Sample.php](Setup/Schema/Sample.php)
